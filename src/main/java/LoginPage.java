@@ -1,8 +1,8 @@
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.enabled;
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class LoginPage {
 
@@ -12,9 +12,9 @@ public class LoginPage {
     private SelenideElement errorMessageUsername = $(".text-error");
     private SelenideElement errorMessagePassword = $(".text-error");
     private SelenideElement loginFormTitle = $("h1");
-    private SelenideElement eyeIcon = $(".password-eye");
-
-
+    private SelenideElement signInLink = $x("//*[@id=\"root\"]/div/div/p/a");
+    private SelenideElement singUpButton = $x("//*[@id=\"root\"]/div/div/form/p/a");
+    private SelenideElement createAccountTitle = $x("//*[@id=\"root\"]/div/div/form/h1");
 
 
     public void enterUsername(String usernameValue) {
@@ -53,8 +53,14 @@ public class LoginPage {
         loginFormTitle.shouldHave(text(expectedLoginFormTitle));
     }
 
-    public void checkEyeIconIs() {
-        eyeIcon.shouldBe(enabled);
+    public void checkSignInLink() {
+        signInLink.shouldNotBe(visible);
+    }
+
+    public void clickOnSingUpButton(){singUpButton.click();}
+
+    public void checkCreateAccountMessage(String expectedCreateAccountText){
+        createAccountTitle.shouldHave(text(expectedCreateAccountText));
     }
 }
 

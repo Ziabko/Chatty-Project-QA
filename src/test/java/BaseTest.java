@@ -16,6 +16,7 @@ public class BaseTest {
     AdminPanelPage adminPanelPage = new AdminPanelPage();
     HomePage homePage = new HomePage();
     Header header = new Header();
+    CreateAccountPage createAccountPage = new CreateAccountPage();
 
 
 }

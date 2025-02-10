@@ -1,14 +1,11 @@
-import com.codeborne.selenide.Condition;
+
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.codeborne.selenide.Selenide.$;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class LoginTest extends BaseTest {
 
-    private static final Logger log = LoggerFactory.getLogger(LoginTest.class);
 
     //  ******  Id 1. Authorization Admin. Valid data.  ********
     // +
@@ -41,7 +38,7 @@ public class LoginTest extends BaseTest {
     }
 
 //  ******  Id 3, 37. Authorization User/Admin. Invalid Password.  ******** Expected: error message "incorrect username or password"
-    // ????????
+    // -
     @Test
     public void invalidPassword() {
         loginPage.enterUsername("Mochalka95@gmail.com");
@@ -88,7 +85,14 @@ public class LoginTest extends BaseTest {
        loginPage.checkLoginFormTitle("Login Form");
     }
 
-    //  ******  Id 130  Input a long password  ********  Expected: The “eye” icon is on top of the password value
+    //   ******  Sign in link on Login page should not be visible  ******* Expected: Sign in link is not visible
+    //
+    @Test
+    public void checkSignInLinkIsNotVisible(){
+       loginPage.checkSignInLink();
+    }
+
+
 
 
 
