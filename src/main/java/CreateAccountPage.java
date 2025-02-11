@@ -32,9 +32,6 @@ public class CreateAccountPage {
     public void enterConfirmPassword(String passwordValue) {
         confirmPasswordInputField.setValue(passwordValue);}
 
-    public void checkAdminSelect(){
-        selectAdminStatus.click();}
-
     public void checkUserSelect(){
         selectUserStatus.click();}
 

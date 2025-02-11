@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="id 139 is negativ">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CreatePostsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CreatePostTest.java" afterDir="false" />
+    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="createPostPage, PostTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CreateAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreateAccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CreateAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CreatePostsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreatePostsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CreatePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreatePostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,11 @@
     "JUnit.CreateAccountTest.createUserAccountWithInvalidEmail.executor": "Run",
     "JUnit.CreateAccountTest.createUserAccountWithInvalidPassword.executor": "Run",
     "JUnit.CreateAccountTest.validCreateUserAccount.executor": "Run",
+    "JUnit.CreatePostTest.createPostUserWithEmptyContent.executor": "Run",
+    "JUnit.CreatePostTest.createPostUserWithEmptyTitle.executor": "Run",
     "JUnit.CreatePostTest.createPostUserWithEmtyDescription.executor": "Run",
+    "JUnit.CreatePostTest.createPostUserWithInvalidDescription.executor": "Run",
+    "JUnit.CreatePostTest.createPostUserWithInvalidTitle.executor": "Run",
     "JUnit.CreatePostTest.createPostUserWithValidData.executor": "Run",
     "JUnit.LoginTest.checkSignInLinkIsNotVisible.executor": "Run",
     "JUnit.LoginTest.emptyLoginAndPassword.executor": "Run",
@@ -69,32 +71,22 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.CreatePostTest.createPostUserWithEmtyDescription">
-    <configuration name="CreateAccountTest.createUserAccountWithEmptyEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CreatePostTest.createPostUserWithEmptyContent">
+    <configuration name="CreatePostTest.createPostUserWithEmptyContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreateAccountTest" />
-      <option name="METHOD_NAME" value="createUserAccountWithEmptyEmail" />
+      <option name="MAIN_CLASS_NAME" value="CreatePostTest" />
+      <option name="METHOD_NAME" value="createPostUserWithEmptyContent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateAccountTest.createUserAccountWithEmptyPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreatePostTest.createPostUserWithEmptyTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreateAccountTest" />
-      <option name="METHOD_NAME" value="createUserAccountWithEmptyPassword" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateAccountTest.createUserAccountWithInvalidPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qa-project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreateAccountTest" />
-      <option name="METHOD_NAME" value="createUserAccountWithInvalidPassword" />
+      <option name="MAIN_CLASS_NAME" value="CreatePostTest" />
+      <option name="METHOD_NAME" value="createPostUserWithEmptyTitle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,11 +102,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreatePostTest.createPostUserWithValidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreatePostTest.createPostUserWithInvalidDescription" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CreatePostTest" />
-      <option name="METHOD_NAME" value="createPostUserWithValidData" />
+      <option name="METHOD_NAME" value="createPostUserWithInvalidDescription" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreatePostTest.createPostUserWithInvalidTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qa-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CreatePostTest" />
+      <option name="METHOD_NAME" value="createPostUserWithInvalidTitle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CreatePostTest.createPostUserWithEmptyContent" />
+        <item itemvalue="JUnit.CreatePostTest.createPostUserWithInvalidDescription" />
+        <item itemvalue="JUnit.CreatePostTest.createPostUserWithEmptyTitle" />
+        <item itemvalue="JUnit.CreatePostTest.createPostUserWithInvalidTitle" />
         <item itemvalue="JUnit.CreatePostTest.createPostUserWithEmtyDescription" />
-        <item itemvalue="JUnit.CreatePostTest.createPostUserWithValidData" />
-        <item itemvalue="JUnit.CreateAccountTest.createUserAccountWithInvalidPassword" />
-        <item itemvalue="JUnit.CreateAccountTest.createUserAccountWithEmptyEmail" />
-        <item itemvalue="JUnit.CreateAccountTest.createUserAccountWithEmptyPassword" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739269609675</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="createPostPage, PostTest">
+      <option name="closed" value="true" />
+      <created>1739282817759</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739282817759</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,6 +217,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change test and page classes" />
     <MESSAGE value="id 139 is negativ" />
-    <option name="LAST_COMMIT_MESSAGE" value="id 139 is negativ" />
+    <MESSAGE value="createPostPage, PostTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="createPostPage, PostTest" />
   </component>
 </project>
