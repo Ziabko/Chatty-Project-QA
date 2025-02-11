@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="change test and page classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CreateAccountPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CreateAccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CreateAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreateAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CreateAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateAccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +42,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.CreateAccountTest.createAccountWithAdminStatus.executor": "Run",
+    "JUnit.CreateAccountTest.createAccountWithEmptyConfirmPassword.executor": "Run",
+    "JUnit.CreateAccountTest.createAccountWithInvalidConfirmPassword.executor": "Run",
     "JUnit.CreateAccountTest.createUserAccountWithEmptyEmail.executor": "Run",
+    "JUnit.CreateAccountTest.createUserAccountWithEmptyEmailAndPassword.executor": "Run",
+    "JUnit.CreateAccountTest.createUserAccountWithEmptyPassword.executor": "Run",
     "JUnit.CreateAccountTest.createUserAccountWithInvalidEmail.executor": "Run",
     "JUnit.CreateAccountTest.validCreateUserAccount.executor": "Run",
     "JUnit.LoginTest.checkSignInLinkIsNotVisible.executor": "Run",
@@ -55,58 +56,58 @@
     "JUnit.LoginTest.successUserLogin.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Olga__10.02",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Tel_Ran/QA/18.12.24/orangehrm-selenide-210405",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.CreateAccountTest.createUserAccountWithEmptyEmail">
-    <configuration name="CreateAccountTest.createUserAccountWithEmptyEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CreateAccountTest.createAccountWithAdminStatus">
+    <configuration name="CreateAccountTest.createAccountWithAdminStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CreateAccountTest" />
-      <option name="METHOD_NAME" value="createUserAccountWithEmptyEmail" />
+      <option name="METHOD_NAME" value="createAccountWithAdminStatus" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateAccountTest.createUserAccountWithInvalidEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateAccountTest.createAccountWithEmptyConfirmPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CreateAccountTest" />
-      <option name="METHOD_NAME" value="createUserAccountWithInvalidEmail" />
+      <option name="METHOD_NAME" value="createAccountWithEmptyConfirmPassword" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateAccountTest.validCreateUserAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateAccountTest.createAccountWithInvalidConfirmPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CreateAccountTest" />
-      <option name="METHOD_NAME" value="validCreateUserAccount" />
+      <option name="METHOD_NAME" value="createAccountWithInvalidConfirmPassword" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.checkSignInLinkIsNotVisible" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateAccountTest.createUserAccountWithEmptyEmailAndPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginTest" />
-      <option name="METHOD_NAME" value="checkSignInLinkIsNotVisible" />
+      <option name="MAIN_CLASS_NAME" value="CreateAccountTest" />
+      <option name="METHOD_NAME" value="createUserAccountWithEmptyEmailAndPassword" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.successAdminLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateAccountTest.createUserAccountWithEmptyPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginTest" />
-      <option name="METHOD_NAME" value="successAdminLogin" />
+      <option name="MAIN_CLASS_NAME" value="CreateAccountTest" />
+      <option name="METHOD_NAME" value="createUserAccountWithEmptyPassword" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -114,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CreateAccountTest.createUserAccountWithEmptyEmail" />
-        <item itemvalue="JUnit.CreateAccountTest.createUserAccountWithInvalidEmail" />
-        <item itemvalue="JUnit.CreateAccountTest.validCreateUserAccount" />
-        <item itemvalue="JUnit.LoginTest.checkSignInLinkIsNotVisible" />
-        <item itemvalue="JUnit.LoginTest.successAdminLogin" />
+        <item itemvalue="JUnit.CreateAccountTest.createAccountWithAdminStatus" />
+        <item itemvalue="JUnit.CreateAccountTest.createAccountWithInvalidConfirmPassword" />
+        <item itemvalue="JUnit.CreateAccountTest.createAccountWithEmptyConfirmPassword" />
+        <item itemvalue="JUnit.CreateAccountTest.createUserAccountWithEmptyEmailAndPassword" />
+        <item itemvalue="JUnit.CreateAccountTest.createUserAccountWithEmptyPassword" />
       </list>
     </recent_temporary>
   </component>
