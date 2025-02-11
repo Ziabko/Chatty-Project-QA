@@ -108,7 +108,7 @@ public class CreateAccountTest extends BaseTest {
     }
 
     //****** ID 139  Possibility to select Admin status at registration (should not be)   *******  //  Admin status is not available
-    // +
+    // -
     @Test
     public void createAccountWithAdminStatus(){
         loginPage.clickOnSingUpButton();
