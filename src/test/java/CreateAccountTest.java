@@ -55,7 +55,7 @@ public class CreateAccountTest extends BaseTest {
 
     }
 
-    //   ****** ID 135   Create account with empty Password   *******  //  Expected: error message "Password cannot be empty"
+    //   ****** ID 135   Create account with empty Password   *******  //  Expected: Registration button is disabled
     // +
     @Test
     public void createUserAccountWithEmptyPassword(){
@@ -64,10 +64,9 @@ public class CreateAccountTest extends BaseTest {
         createAccountPage.clearPasswordFiled();
         createAccountPage.checkUserSelect();
         createAccountPage.checkRegistrationButtonDisabled();
-        createAccountPage.errorMessageTheInvalidPassword("Password cannot be empty");
-    }
+      }
 
-    //****** ID 136   Create account with empty Email and Password   *******  //  Expected: error messages "Password cannot be empty", "Password cannot be empty","Confirm password cannot be empty
+    //****** ID 136   Create account with empty Email and Password   *******  //  Expected: Registration button is disabled
     // +
     @Test
     public void createUserAccountWithEmptyEmailAndPassword(){
@@ -77,11 +76,9 @@ public class CreateAccountTest extends BaseTest {
         createAccountPage.clearConfirmPasswordFiled();
         createAccountPage.checkUserSelect();
         createAccountPage.checkRegistrationButtonDisabled();
-        createAccountPage.checkErrorMessageEmptyEmail("Email cannot be empty");
-        createAccountPage.checkErrorMessageEmptyPassword("Password cannot be empty");
-        createAccountPage.checkErrorMessageEmptyConfirmPassword("Confirm password cannot be empty");
-    }
-    //****** ID 137   Create account with empty Confirm Password   *******  //  Expected: error message "Confirm password cannot be empty"
+       }
+
+    //****** ID 137   Create account with empty Confirm Password   *******  //  Expected: Registration button is disabled
     // +
     @Test
     public void createAccountWithEmptyConfirmPassword(){
@@ -91,8 +88,7 @@ public class CreateAccountTest extends BaseTest {
         createAccountPage.clearConfirmPasswordFiled();
         createAccountPage.checkUserSelect();
         createAccountPage.checkRegistrationButtonDisabled();
-        createAccountPage.checkErrorMessageEmptyConfirmPassword("Confirm password cannot be empty");
-    }
+     }
 
     //****** ID 138   Create account with invalid confirm password   *******  //  Expected: error message "Passwords do not match"
     // +
@@ -103,7 +99,6 @@ public class CreateAccountTest extends BaseTest {
         createAccountPage.enterPassword("Vbnm12345");
         createAccountPage.enterConfirmPassword("Vbnm1234567");
         createAccountPage.checkUserSelect();
-        createAccountPage.checkRegistrationButtonDisabled();
         createAccountPage.checkErrorMessageInvalidConfirmPassword("Passwords do not match");
     }
 

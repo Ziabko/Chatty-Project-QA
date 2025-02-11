@@ -18,8 +18,7 @@ public class LoginPage {
 
 
     public void enterUsername(String usernameValue) {
-        usernameInputFiled.setValue(usernameValue);
-    }
+        usernameInputFiled.setValue(usernameValue);    }
 
     public void enterPassword(String passwordValue) {
         passwordInputField.setValue(passwordValue);
@@ -30,12 +29,10 @@ public class LoginPage {
     }
 
     public void checkErrorMessageUsername(String expectedErrorMessageUsername) {
-        errorMessageUsername.shouldHave(text(expectedErrorMessageUsername));
-    }
+        errorMessageUsername.shouldHave(text(expectedErrorMessageUsername));    }
 
     public void checkErrorMessagePassword(String expectedErrorMessagePassword) {
-        errorMessagePassword.shouldHave(text(expectedErrorMessagePassword));
-    }
+        errorMessagePassword.shouldHave(text(expectedErrorMessagePassword));    }
 
     public void clearUsername() {
         usernameInputFiled.clear();
@@ -50,8 +47,7 @@ public class LoginPage {
     }
 
     public void checkLoginFormTitle(String expectedLoginFormTitle){
-        loginFormTitle.shouldHave(text(expectedLoginFormTitle));
-    }
+        loginFormTitle.shouldHave(text(expectedLoginFormTitle));    }
 
     public void checkSignInLink() {
         signInLink.shouldNotBe(visible);
@@ -60,8 +56,7 @@ public class LoginPage {
     public void clickOnSingUpButton(){singUpButton.click();}
 
     public void checkCreateAccountMessage(String expectedCreateAccountText){
-        createAccountTitle.shouldHave(text(expectedCreateAccountText));
-    }
+        createAccountTitle.shouldHave(text(expectedCreateAccountText));    }
 }
 
 
