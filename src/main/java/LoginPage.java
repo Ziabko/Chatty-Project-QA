@@ -17,6 +17,13 @@ public class LoginPage {
     private SelenideElement createAccountTitle = $x("//*[@id=\"root\"]/div/div/form/h1");
 
 
+    public void successLogin(String usernameValue, String passwordValue){
+        enterUsername(usernameValue);
+        enterPassword(passwordValue);
+        clickOnLoginButton();
+    }
+
+
     public void enterUsername(String usernameValue) {
         usernameInputFiled.setValue(usernameValue);    }
 

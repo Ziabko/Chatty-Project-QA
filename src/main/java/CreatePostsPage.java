@@ -13,52 +13,51 @@ public class CreatePostsPage {
     private SelenideElement postСontentField = $("[name=\"content\"]");
     private SelenideElement submitButton = $("button");
     private SelenideElement titleOfCreatedPost = $(".post-content__top h3");
-
-
-
-
-    public void clickCreatePostIcon(){
-        createPostIcon.click();
-    }
-    public void inputPostTitleField(String titleValidValue){
-        postTitleField.setValue(titleValidValue);
-    }
-    public void inputPostDescriptionField(String descriptionValidValue){
-        postDescriptionField.setValue(descriptionValidValue);
-    }
-    public void inputPostContentField(String contentValidValue){
-        postСontentField.setValue(contentValidValue);
-    }
-    public void clickSubmitButton(){
-        submitButton.click();
-    }
-    public void checkTitleOfCreatedPost(String expectedTitleOfCreatedPost) {
-        titleOfCreatedPost.shouldHave(text(expectedTitleOfCreatedPost));
-    }
-
-
-
-
-
-// Stefan's changes 11.02
-
+    private SelenideElement uploadImageField = $(".post_dropzone__TA6PN  input");
+    private SelenideElement errorMessageUploadImage = $(".post_error_message__FQTrb");
     private SelenideElement errorMessageEmptyTitle = $(".form-group:first-child .error");
     private SelenideElement errorMessageEmptyDescription = $x(".form-group:nth-child(2) .error");
     private SelenideElement errorMessageEmptyContent = $x("//*[@id=\"root\"]/div[2]/div[2]/div/form/div[3]/p");
 
 
+    public void clickCreatePostIcon(){
+        createPostIcon.click();
+    }
+
+    public void inputPostTitleField(String titleValidValue){
+        postTitleField.setValue(titleValidValue);
+    }
+
+    public void inputPostDescriptionField(String descriptionValidValue){
+        postDescriptionField.setValue(descriptionValidValue);
+    }
+    public void inputPostContentField(String contentValidValue){
+         postСontentField.setValue(contentValidValue);
+    }
+
+    public void clickSubmitButton(){
+        submitButton.click();
+    }
+
+    public void checkTitleOfCreatedPost(String expectedTitleOfCreatedPost) {
+        titleOfCreatedPost.shouldHave(text(expectedTitleOfCreatedPost));
+    }
 
     public void titleErrorTextMessage(String expectedTitleErrorTextMessage){
-        errorMessageEmptyTitle.shouldHave(text(expectedTitleErrorTextMessage));}
+        errorMessageEmptyTitle.shouldHave(text(expectedTitleErrorTextMessage));
+    }
 
     public void descriptionErrorTextMessage(String expectedDescriptionErrorTextMessage){
-        errorMessageEmptyDescription.shouldHave(text(expectedDescriptionErrorTextMessage));}
+        errorMessageEmptyDescription.shouldHave(text(expectedDescriptionErrorTextMessage));
+    }
 
     public void contentTextMessage(String expectedContentErrorTextMessage){
-        errorMessageEmptyContent.shouldHave(text(expectedContentErrorTextMessage));}
+        errorMessageEmptyContent.shouldHave(text(expectedContentErrorTextMessage));
+    }
 
     public void clearDescriptionFiled(){
-        postDescriptionField.clear();}
+        postDescriptionField.clear();
+    }
 
     public void clearContentFiled() {
         postСontentField.clear();
@@ -67,10 +66,21 @@ public class CreatePostsPage {
     public void clearTitleFiled(){
         postTitleField.clear();
     }
+
     public void checkSubmitButtonDisabled() {
         submitButton.shouldNot(enabled);
     }
 
+    public void uploadImage (String imageFilePath) {
+        uploadImageField.uploadFile(new java.io.File(imageFilePath));
+               }
+
+    public void checkErrorMessageUploadImage (String expectedErrorMessageUploadImage){
+        errorMessageUploadImage.shouldHave(text(expectedErrorMessageUploadImage));
+    }
+
+    }
 
 
-}
+
+

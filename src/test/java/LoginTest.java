@@ -11,9 +11,7 @@ public class LoginTest extends BaseTest {
     // +
     @Test
     public void successAdminLogin() {
-        loginPage.enterUsername("zyablik2004@ukr.net");
-        loginPage.enterPassword("AdminOlga1");
-        loginPage.clickOnLoginButton();
+        loginPage.successLogin("zyablik2004@ukr.net","AdminOlga1");
         adminPanelPage.checkHeader("Admin panel");
     }
 
@@ -21,29 +19,23 @@ public class LoginTest extends BaseTest {
     // +
     @Test
     public void successUserLogin() {
-        loginPage.enterUsername("Mochalka1995@gmail.com");
-        loginPage.enterPassword("barrel1995");
-        loginPage.clickOnLoginButton();
+        loginPage.successLogin("Mochalka1995@gmail.com","barrel1995");
         homePage.checkHomePageTitle("Feed");
     }
 
-    //  ******  Id 2, 36. Authorization User/Admin. Invalid username.  ********
+    //  ******  Id 2, 36. Authorization User/Admin. Invalid username.  ********  Expected: error message "Incorrect username or password"
     // -
     @Test
     public void invalidUsername() {
-        loginPage.enterUsername("Mochalka@gmail.com");
-        loginPage.enterPassword("barrel1995");
-        loginPage.clickOnLoginButton();
-        loginPage.checkErrorMessageUsername("Incorrect user name or password");
+        loginPage.successLogin("Mochalka@gmail.com","barrel1995");
+        loginPage.checkErrorMessageUsername("Incorrect username or password");
     }
 
 //  ******  Id 3, 37. Authorization User/Admin. Invalid Password.  ******** Expected: error message "incorrect username or password"
     // -
     @Test
     public void invalidPassword() {
-        loginPage.enterUsername("Mochalka95@gmail.com");
-        loginPage.enterPassword("barrel199576");
-        loginPage.clickOnLoginButton();
+        loginPage.successLogin("Mochalka1995@gmail.com","barr1995");
         loginPage.checkErrorMessagePassword("Incorrect username or password");
     }
 
@@ -78,9 +70,7 @@ public class LoginTest extends BaseTest {
     // +
     @Test
     public void accountLogoutAdminUser(){
-        loginPage.enterUsername("Mochalka1995@gmail.com");
-        loginPage.enterPassword("barrel1995");
-        loginPage.clickOnLoginButton();
+        loginPage.successLogin("Mochalka1995@gmail.com","barrel1995");
         header.selectYouProfilePage();
        loginPage.checkLoginFormTitle("Login Form");
     }

@@ -18,6 +18,7 @@ public class BaseTest {
     Header header = new Header();
     CreateAccountPage createAccountPage = new CreateAccountPage();
     CreatePostsPage createPostsPage = new CreatePostsPage();
+    UserRegistrationPage userRegistrationPage = new UserRegistrationPage();
 
 
 }

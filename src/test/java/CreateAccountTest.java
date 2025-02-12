@@ -2,16 +2,17 @@ import org.junit.jupiter.api.Test;
 
 public class CreateAccountTest extends BaseTest {
 
-    //Id 131   Create user account with valid data(Stefan Martianov 10.02.2025)//
+    //  *********    Id 131   Create user account with valid data(Stefan Martianov 10.02.2025) *******  Expected: Home page with title "Feed" is visible
     // +
     @Test
     public void validCreateUserAccount(){
         loginPage.clickOnSingUpButton();
-        createAccountPage.enterUsername("base111@gmail.com");
+        createAccountPage.enterUsername("base2111@gmail.com");
         createAccountPage.enterPassword("qwe123asd789");
         createAccountPage.enterConfirmPassword("qwe123asd789");
         createAccountPage.checkUserSelect();
         createAccountPage.clickTheRegistrationButton();
+        createAccountPage.checkHomePageTitle("Feed");
     }
 
     //   ****** ID 132   Create account with invalid Email   *******  //  Expected: error message "Incorrect email format"
@@ -64,6 +65,7 @@ public class CreateAccountTest extends BaseTest {
         createAccountPage.clearPasswordFiled();
         createAccountPage.checkUserSelect();
         createAccountPage.checkRegistrationButtonDisabled();
+        createAccountPage.errorMessageTheInvalidPassword("Password cannot be empty");
       }
 
     //****** ID 136   Create account with empty Email and Password   *******  //  Expected: Registration button is disabled
@@ -109,6 +111,17 @@ public class CreateAccountTest extends BaseTest {
         loginPage.clickOnSingUpButton();
         createAccountPage.clickDropdownSelect();
         createAccountPage.checkAdminStatus();
+    }
+
+    // check to create an account with an existing user.(Stefan Martianov - 12/02/2025)
+    @Test public void createAccountWithExistUser(){
+        loginPage.clickOnSingUpButton();
+        createAccountPage.enterUsername("base2111@gmail.com");
+        createAccountPage.enterPassword("qwe123asd789");
+        createAccountPage.enterConfirmPassword("qwe123asd789");
+        createAccountPage.checkUserSelect();
+        createAccountPage.clickTheRegistrationButton();
+        createAccountPage.alreadyExistsUsersTextError("Email already exists!");
     }
 
 }

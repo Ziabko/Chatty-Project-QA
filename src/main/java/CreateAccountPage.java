@@ -12,14 +12,15 @@ public class CreateAccountPage {
     private SelenideElement selectUserStatus =$("[value='user']");
     private SelenideElement registrationButton =$("[type=\"submit\"]");
 
-    private SelenideElement errorMessageInvalidEmail =$(".text-error");
-    private SelenideElement errorMessageInvalidPassword =$(".text-error");
+    private SelenideElement errorMessageInvalidEmail =$("div:nth-child(4)");
+    private SelenideElement errorMessageInvalidPassword =$("div:nth-child(5)");
+
     private SelenideElement errorMessageInvalidConfirmPassword = $(".text-error");
 
     private SelenideElement dropdownSelect = $("select");
     private SelenideElement adminStatus = $("[value=\"admin\"]");
-
-
+    private SelenideElement homePageTitle = $(".post-header__feed");
+    private SelenideElement alreadyExistsUsersError =$(".container .text-error");
 
 
     public void enterUsername(String usernameValue) {
@@ -36,6 +37,10 @@ public class CreateAccountPage {
         selectUserStatus.click();}
 
     public void clickTheRegistrationButton(){registrationButton.click();}
+
+    public void checkHomePageTitle(String expectedHomePageTitle){
+        homePageTitle.shouldHave(text(expectedHomePageTitle));
+    }
 
     public void clearEmailField (){
         emailInputField.clear();
@@ -60,8 +65,8 @@ public class CreateAccountPage {
     }
 
 
-    public  void checkErrorMessageInvalidConfirmPassword(String expectedErrorMessageImvalidConfirmPassword){
-        errorMessageInvalidConfirmPassword.shouldHave(text(expectedErrorMessageImvalidConfirmPassword));
+    public  void checkErrorMessageInvalidConfirmPassword(String expectedErrorMessageInvalidConfirmPassword){
+        errorMessageInvalidConfirmPassword.shouldHave(text(expectedErrorMessageInvalidConfirmPassword));
     }
 
     public void clickDropdownSelect (){
@@ -71,7 +76,12 @@ public class CreateAccountPage {
         adminStatus.shouldNotBe(visible);
     }
 
+    public void alreadyExistsUsersTextError(String expectedAlreadyExistsUsersTextError){
+        alreadyExistsUsersError.shouldHave(text(expectedAlreadyExistsUsersTextError));
     }
+
+
+}
 
 
 

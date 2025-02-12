@@ -6,12 +6,19 @@ public class Header {
 
     private SelenideElement helloUser = $(".header__user");
     private SelenideElement logoutUserProfil = $("a[href=\"/login\"]");
-
     private SelenideElement userProfile = $("a[href=\"/userprofile\"]");
+    private SelenideElement homeLink = $(".header__nav-list li:first-child");
 
 
     public  void selectYouProfilePage (){
         helloUser.click();
         logoutUserProfil.click();
+    }
+    public void userProfileEntrance (){
+        helloUser.click();
+        userProfile.click();
+    }
+    public void clickHomeLink(){
+        homeLink.click();
     }
 }

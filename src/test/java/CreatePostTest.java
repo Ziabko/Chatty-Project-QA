@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 public class CreatePostTest extends BaseTest{
 
 //  *******  Creating a post with valid data in Title, Description, Content ********  Expected: The post saved
@@ -7,9 +9,7 @@ public class CreatePostTest extends BaseTest{
     @Test
     public void createPostUserWithValidData(){
         String expectedTitle = "Testing";
-        loginPage.enterUsername("z0667272624@gmail.com");
-        loginPage.enterPassword("UserOlga1");
-        loginPage.clickOnLoginButton();
+        loginPage.successLogin("z0667272624@gmail.com","UserOlga1");
         createPostsPage.clickCreatePostIcon();
         createPostsPage.inputPostTitleField(expectedTitle);
         createPostsPage.inputPostDescriptionField("Testing Description");
@@ -20,13 +20,11 @@ public class CreatePostTest extends BaseTest{
     }
 
     //  ******* ID 115  Creating a post with valid data in Title, Content (with empty description) ********  Expected: The post saved
-
+    // -
     @Test
-    public void createPostUserWithEmtyDescription(){
+    public void createPostUserWithEmptyDescription(){
         String expectedTitle = "Testing";
-        loginPage.enterUsername("z0667272624@gmail.com");
-        loginPage.enterPassword("UserOlga1");
-        loginPage.clickOnLoginButton();
+        loginPage.successLogin("z0667272624@gmail.com","UserOlga1");
         createPostsPage.clickCreatePostIcon();
         createPostsPage.inputPostTitleField(expectedTitle);
         createPostsPage.inputPostContentField("Testing theory");
@@ -40,9 +38,7 @@ public class CreatePostTest extends BaseTest{
     @Test
     public void createPostUserWithInvalidTitle(){
         String expectedTitle = "1";
-        loginPage.enterUsername("z0667272624@gmail.com");
-        loginPage.enterPassword("UserOlga1");
-        loginPage.clickOnLoginButton();
+        loginPage.successLogin("z0667272624@gmail.com","UserOlga1");
         createPostsPage.clickCreatePostIcon();
         createPostsPage.inputPostTitleField(expectedTitle);
         createPostsPage.inputPostDescriptionField("TestRun for QA");
@@ -54,9 +50,7 @@ public class CreatePostTest extends BaseTest{
     // -
     @Test
     public void createPostUserWithEmptyTitle(){
-        loginPage.enterUsername("z0667272624@gmail.com");
-        loginPage.enterPassword("UserOlga1");
-        loginPage.clickOnLoginButton();
+        loginPage.successLogin("z0667272624@gmail.com","UserOlga1");
         createPostsPage.clickCreatePostIcon();
         createPostsPage.clearTitleFiled();
         createPostsPage.inputPostDescriptionField("TestRun for QA");
@@ -68,9 +62,7 @@ public class CreatePostTest extends BaseTest{
     // -
     @Test
     public void createPostUserWithInvalidDescription(){
-        loginPage.enterUsername("z0667272624@gmail.com");
-        loginPage.enterPassword("UserOlga1");
-        loginPage.clickOnLoginButton();
+        loginPage.successLogin("z0667272624@gmail.com","UserOlga1");
         createPostsPage.clickCreatePostIcon();
         createPostsPage.inputPostTitleField("WOOFmagic");
         createPostsPage.inputPostDescriptionField("s");
@@ -82,15 +74,98 @@ public class CreatePostTest extends BaseTest{
     // -
     @Test
     public void createPostUserWithEmptyContent(){
-        loginPage.enterUsername("z0667272624@gmail.com");
-        loginPage.enterPassword("UserOlga1");
-        loginPage.clickOnLoginButton();
+        loginPage.successLogin("z0667272624@gmail.com","UserOlga1");
         createPostsPage.clickCreatePostIcon();
         createPostsPage.inputPostTitleField("WOOFmagic");
         createPostsPage.inputPostDescriptionField("The DogMaster");
         createPostsPage.clearContentFiled();
         createPostsPage.checkSubmitButtonDisabled();
     }
+
+    //  ******* ID 123  Creating a post with 1001 symbol Content ********  Expected: Submit button is disable
+    // -
+    @Test
+    public void createPostUserWith1001SymbolsContent(){
+        String longText = "A".repeat(1001);
+        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        createPostsPage.clickCreatePostIcon();
+        createPostsPage.inputPostTitleField("WOOFmagic");
+        createPostsPage.inputPostDescriptionField("The DogMaster");
+        createPostsPage.inputPostContentField(longText);
+        createPostsPage.checkSubmitButtonDisabled();
+    }
+
+
+    //  ******* ID 119  Creating a post with invalid image format (Size 3 Mb) ********  Expected: error message "Max size 2Mb
+    // +
+    @Test
+    public void createPostUserWithBigImageSize () {
+        String imagePath = "src/test/resourse/images/image3Mb.jpg";
+        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        createPostsPage.clickCreatePostIcon();
+        createPostsPage.inputPostTitleField("Image big size");
+        createPostsPage.inputPostDescriptionField("Image big size Description");
+        createPostsPage.inputPostContentField("Image big size content");
+        createPostsPage.uploadImage(imagePath);
+        createPostsPage.checkErrorMessageUploadImage("File size exceeds the 2MB limit");
+
+    }
+
+    //  ******* ID 121  Creating a post with valid image format jpg  ********  Expected: home page is visible         ?????
+    // +
+    @Test
+    public void createPostUserWithValidImageJpg () {
+        String imagePath = "src/test/resourse/images/smallimage.jpg";
+        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        createPostsPage.clickCreatePostIcon();
+        createPostsPage.inputPostTitleField("Image big size");
+        createPostsPage.inputPostDescriptionField("Image big size Description");
+        createPostsPage.inputPostContentField("Image big size content");
+        createPostsPage.uploadImage(imagePath);
+        homePage.checkHomePageTitle("Feed");
+
+    }
+
+    //  ******* ID 125  Creating a post with valid image format (png)  ********  Expected: home page is visible   ?????
+    // +
+    @Test
+    public void createPostUserWithValidImagePng () {
+        String imagePath = "src/test/resourse/images/png.png";
+        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        createPostsPage.clickCreatePostIcon();
+        createPostsPage.inputPostTitleField("Image big size");
+        createPostsPage.inputPostDescriptionField("Image big size Description");
+        createPostsPage.inputPostContentField("Image big size content");
+        createPostsPage.uploadImage(imagePath);
+        homePage.checkHomePageTitle("Feed");
+
+    }
+
+    //  ******* ID 122  Creating a post with invalid image format (gif)  ********  Expected: error message
+    // -
+    @Test
+    public void createPostUserWithInValidImageGif () {
+        String imagePath = "src/test/resourse/images/gif.gif";
+        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        createPostsPage.clickCreatePostIcon();
+        createPostsPage.inputPostTitleField("Image big size");
+        createPostsPage.inputPostDescriptionField("Image big size Description");
+        createPostsPage.inputPostContentField("Image big size content");
+        createPostsPage.uploadImage(imagePath);
+        homePage.checkHomePageTitle("Feed");
+        createPostsPage.checkErrorMessageUploadImage("The image format should be only: jpg, jpeg, png");
+
+    }
+
+
+
+
+
+
+
+
+
+
 }
 
 
