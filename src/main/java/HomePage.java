@@ -5,8 +5,13 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class HomePage {
     private SelenideElement homePageTitle = $( ".post-header__feed");
+    private SelenideElement homePageUserName = $(".sidebar__section div:nth-child(1) p");
 
     public void checkHomePageTitle(String expectedTitleText){
         homePageTitle.shouldHave(text(expectedTitleText));
+    }
+
+    public void checkHomePageUserName(String expectedHomePageUserName){
+        homePageUserName.shouldHave(text(expectedHomePageUserName));
     }
 }

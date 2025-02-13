@@ -1,5 +1,7 @@
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class Header {
@@ -21,4 +23,8 @@ public class Header {
     public void clickHomeLink(){
         homeLink.click();
     }
+    public void checkCreatedUserName(String expectedUserName){
+        helloUser.shouldHave(Condition.value(expectedUserName));
+    }
+
 }

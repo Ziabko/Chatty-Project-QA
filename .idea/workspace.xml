@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="createPostPage, PostTest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/UserRegistrationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resourse/images/gif.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resourse/images/image3Mb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resourse/images/png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resourse/images/smallimage.jpg" afterDir="false" />
+    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="user registration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CreateAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreateAccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CreatePostsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreatePostsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Header.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CreateAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserRegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserRegistrationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CreatePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreatePostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +72,14 @@
     "JUnit.LoginTest.successAdminLogin.executor": "Run",
     "JUnit.LoginTest.successUserLogin.executor": "Run",
     "JUnit.UserRegistrationTest.registrationWithValidData.executor": "Run",
+    "JUnit.UserRegistrationTest.uploadAvatarPhoto.executor": "Run",
+    "JUnit.UserRegistrationTest.userRegistrationWithEmptyName.executor": "Run",
+    "JUnit.UserRegistrationTest.userRegistrationWithEmptySurname.executor": "Run",
+    "JUnit.UserRegistrationTest.userRegistrationWithInvalidBirthdate.executor": "Run",
+    "JUnit.UserRegistrationTest.userRegistrationWithInvalidName.executor": "Run",
+    "JUnit.UserRegistrationTest.userRegistrationWithInvalidSurname.executor": "Run",
+    "JUnit.UserRegistrationTest.userRegistrationWithUnselectedGender.executor": "Run",
+    "JUnit.UserRegistrationTest.userRegistrationWithValidDataWithEmptyPhone.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -97,32 +96,12 @@
       <recent name="C:\Tel_Ran\Chatty-Project-QA\src\test\resourse\images" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserRegistrationTest.registrationWithValidData">
-    <configuration name="CreatePostTest.createPostUserWith1001SymbolsContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qa-project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreatePostTest" />
-      <option name="METHOD_NAME" value="createPostUserWith1001SymbolsContent" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UserRegistrationTest.uploadAvatarPhoto">
     <configuration name="CreatePostTest.createPostUserWithBigImageSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CreatePostTest" />
       <option name="METHOD_NAME" value="createPostUserWithBigImageSize" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreatePostTest.createPostUserWithInValidImageGif" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qa-project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreatePostTest" />
-      <option name="METHOD_NAME" value="createPostUserWithInValidImageGif" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,11 +117,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRegistrationTest.registrationWithValidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserRegistrationTest.uploadAvatarPhoto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UserRegistrationTest" />
-      <option name="METHOD_NAME" value="registrationWithValidData" />
+      <option name="METHOD_NAME" value="uploadAvatarPhoto" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRegistrationTest.userRegistrationWithInvalidSurname" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qa-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserRegistrationTest" />
+      <option name="METHOD_NAME" value="userRegistrationWithInvalidSurname" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRegistrationTest.userRegistrationWithUnselectedGender" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qa-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserRegistrationTest" />
+      <option name="METHOD_NAME" value="userRegistrationWithUnselectedGender" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserRegistrationTest.registrationWithValidData" />
-        <item itemvalue="JUnit.CreatePostTest.createPostUserWith1001SymbolsContent" />
-        <item itemvalue="JUnit.CreatePostTest.createPostUserWithBigImageSize" />
-        <item itemvalue="JUnit.CreatePostTest.createPostUserWithInValidImageGif" />
+        <item itemvalue="JUnit.UserRegistrationTest.uploadAvatarPhoto" />
         <item itemvalue="JUnit.CreatePostTest.createPostUserWithValidImageJpg" />
+        <item itemvalue="JUnit.CreatePostTest.createPostUserWithBigImageSize" />
+        <item itemvalue="JUnit.UserRegistrationTest.userRegistrationWithUnselectedGender" />
+        <item itemvalue="JUnit.UserRegistrationTest.userRegistrationWithInvalidSurname" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739282817759</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="user registration">
+      <option name="closed" value="true" />
+      <created>1739393865935</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739393865935</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,6 +251,7 @@
     <MESSAGE value="change test and page classes" />
     <MESSAGE value="id 139 is negativ" />
     <MESSAGE value="createPostPage, PostTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="createPostPage, PostTest" />
+    <MESSAGE value="user registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="user registration" />
   </component>
 </project>

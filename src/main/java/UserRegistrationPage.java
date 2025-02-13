@@ -1,6 +1,9 @@
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.text;
+import java.io.File;
+
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
 public class UserRegistrationPage {
@@ -14,7 +17,7 @@ public class UserRegistrationPage {
     private SelenideElement changePasswordButton = $(".pass__btn");
     private SelenideElement dropDownGender = $("#gender");
     private SelenideElement saveButton = $(".save__btn");
-    private SelenideElement usersAvatar = $(".user_uploaded_image__JubbD");
+    private SelenideElement usersAvatar = $(".upper-block input");
 
     public void clickEditPlusButton(){
         editPlusIcon.click();
@@ -47,9 +50,19 @@ public class UserRegistrationPage {
     public  void clickSaveButton(){
         saveButton.click();
     }
-    public void checkCreatedUserName(String expectedUserName){
-        userNameField.shouldHave(text(expectedUserName));
+    public  void checkSaveButtonIsDisabled(){
+        saveButton.shouldNotBe(enabled);
     }
+    public void uploadUserAvatar(String imageFilePath){
+        usersAvatar.uploadFile(new File (imageFilePath));
+    }
+//    public void uploadedAvatarImageIsVisible() {
+//        usersAvatar.shouldBe(visible);
+//    }
+//    public void checkUploadedAvatarSrc(String expectedFileName) {
+//        usersAvatar.shouldHave(Condition.attributeMatching("src", ".*" + expectedFileName + ".*"));
+//    }
+
 
 
 

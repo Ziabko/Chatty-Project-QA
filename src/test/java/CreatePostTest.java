@@ -2,6 +2,8 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
+import static com.codeborne.selenide.Selenide.sleep;
+
 public class CreatePostTest extends BaseTest{
 
 //  *******  Creating a post with valid data in Title, Description, Content ********  Expected: The post saved
@@ -111,7 +113,7 @@ public class CreatePostTest extends BaseTest{
 
     }
 
-    //  ******* ID 121  Creating a post with valid image format jpg  ********  Expected: home page is visible         ?????
+    //  ******* ID 121  Creating a post with valid image format jpg  ********  Expected: home page is visible         что проверить ?
     // +
     @Test
     public void createPostUserWithValidImageJpg () {
@@ -126,7 +128,7 @@ public class CreatePostTest extends BaseTest{
 
     }
 
-    //  ******* ID 125  Creating a post with valid image format (png)  ********  Expected: home page is visible   ?????
+    //  ******* ID 125  Creating a post with valid image format (png)  ********  Expected: home page is visible    что проверить ?
     // +
     @Test
     public void createPostUserWithValidImagePng () {
