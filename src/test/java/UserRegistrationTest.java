@@ -129,16 +129,17 @@ public class UserRegistrationTest extends BaseTest {
         userRegistrationPage.checkSaveButtonIsDisabled();
     }
 
-    // ***** ID 140  User registration. Upload avatar photo  ********  Expected: Avatar photo uploaded      проверить, что картинка поменялась
+    // ***** ID 140  User registration. Upload avatar photo  ********  Expected: Avatar photo uploaded
+    // +
     @Test
         public void avatarImageUpload(){
         String avatarImage = "src/test/resourse/images/smallimage.jpg";
         loginPage.successLogin("arnold@gmail.com", "arnold123");
         header.userProfileEntrance();
         userRegistrationPage.clickEditPlusButton();
+        String initialSrc = userRegistrationPage.getOldAvatarSrc();
         userRegistrationPage.uploadUserAvatar(avatarImage);
-        sleep(3000);
-
+        userRegistrationPage.verifyAvatarSrcIsUpdated(initialSrc);
   }
 
 

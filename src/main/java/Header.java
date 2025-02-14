@@ -11,6 +11,7 @@ public class Header {
     private SelenideElement logoutUserProfil = $("a[href=\"/login\"]");
     private SelenideElement userProfile = $("a[href=\"/userprofile\"]");
     private SelenideElement homeLink = $(".header__nav-list li:first-child");
+    private SelenideElement contactLink = $(".header__nav-list li:nth-child(3)");
 
 
     public  void selectYouProfilePage (){
@@ -26,6 +27,9 @@ public class Header {
     }
     public void checkCreatedUserName(String expectedUserName){
         helloUser.shouldHave(Condition.value(expectedUserName));
+    }
+    public void clickContactLink(){
+        contactLink.click();
     }
 
 }

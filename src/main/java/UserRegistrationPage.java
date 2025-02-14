@@ -19,6 +19,7 @@ public class UserRegistrationPage {
     private SelenideElement dropDownGender = $("#gender");
     private SelenideElement saveButton = $(".save__btn");
     private SelenideElement usersAvatar = $(".upper-block input");
+    private SelenideElement oldAvatar = $(".user_avatar_container__R0kVm img");
 
     public void clickEditPlusButton() {
         editPlusIcon.shouldBe(visible).click();
@@ -65,8 +66,18 @@ public class UserRegistrationPage {
         saveButton.shouldNotBe(enabled);
     }
 
+
     public void uploadUserAvatar(String imageFilePath) {
         usersAvatar.uploadFile(new File(imageFilePath));
+    }
+
+    public String getOldAvatarSrc() {
+        return usersAvatar.getAttribute("src");
+    }
+
+    // Проверка, что src изменился
+    public void verifyAvatarSrcIsUpdated(String initialSrc) {
+        oldAvatar.shouldNotHave(Condition.attribute("src", initialSrc));
     }
 
 

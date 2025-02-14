@@ -35,7 +35,7 @@ public class CreatePostTest extends BaseTest{
 
     }
 
-    //  ******* ID 116  Creating a post with invalid Title ********  Expected: Submit button is disable
+    //  ******* ID 116  Creating a post with invalid Title ********  Expected: Submit button is disabled
     // -
     @Test
     public void createPostUserWithInvalidTitle(){
@@ -48,7 +48,7 @@ public class CreatePostTest extends BaseTest{
         createPostsPage.checkSubmitButtonDisabled();
     }
 
-    //  ******* ID 114  Creating a post with empty Title ********  Expected: Submit button is disable
+    //  ******* ID 114  Creating a post with empty Title ********  Expected: Submit button is disabled
     // -
     @Test
     public void createPostUserWithEmptyTitle(){
@@ -60,7 +60,7 @@ public class CreatePostTest extends BaseTest{
         createPostsPage.checkSubmitButtonDisabled();
     }
 
-    //  ******* ID 117  Creating a post with empty Title, Content (with empty description) ********  Expected: Submit button is disable
+    //  ******* ID 117  Creating a post with empty Title, Content (with empty description) ********  Expected: Submit button is disabled
     // -
     @Test
     public void createPostUserWithInvalidDescription(){
@@ -72,7 +72,7 @@ public class CreatePostTest extends BaseTest{
         createPostsPage.checkSubmitButtonDisabled();
     }
 
-    //  ******* ID 118  Creating a post with empty Content ********  Expected: Submit button is disable
+    //  ******* ID 118  Creating a post with empty Content ********  Expected: Submit button is disabled
     // -
     @Test
     public void createPostUserWithEmptyContent(){
@@ -84,7 +84,7 @@ public class CreatePostTest extends BaseTest{
         createPostsPage.checkSubmitButtonDisabled();
     }
 
-    //  ******* ID 123  Creating a post with 1001 symbol Content ********  Expected: Submit button is disable
+    //  ******* ID 123  Creating a post with 1001 symbol Content ********  Expected: Submit button is disabled
     // -
     @Test
     public void createPostUserWith1001SymbolsContent(){
@@ -94,6 +94,18 @@ public class CreatePostTest extends BaseTest{
         createPostsPage.inputPostTitleField("WOOFmagic");
         createPostsPage.inputPostDescriptionField("The DogMaster");
         createPostsPage.inputPostContentField(longText);
+        createPostsPage.checkSubmitButtonDisabled();
+    }
+
+    //  ******* ID 120  Creating a post with Invalid deferred publication date ********  Expected: Submit button is disabled
+    @Test
+    public void createPostUserWithInvalidDeferredPublicationDate(){
+        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        createPostsPage.clickCreatePostIcon();
+        createPostsPage.inputPostTitleField("WOOFmagic");
+        createPostsPage.inputPostDescriptionField("The DogMaster");
+        createPostsPage.inputPostContentField("Test for QA");
+        createPostsPage.inputDatePublishingPostField("13.02.2025");
         createPostsPage.checkSubmitButtonDisabled();
     }
 
@@ -113,7 +125,7 @@ public class CreatePostTest extends BaseTest{
 
     }
 
-    //  ******* ID 121  Creating a post with valid image format jpg  ********  Expected: home page is visible         что проверить ?
+    //  ******* ID 121  Creating a post with valid image format jpg  ********  Expected: home page is visible
     // +
     @Test
     public void createPostUserWithValidImageJpg () {
@@ -124,11 +136,11 @@ public class CreatePostTest extends BaseTest{
         createPostsPage.inputPostDescriptionField("Image big size Description");
         createPostsPage.inputPostContentField("Image big size content");
         createPostsPage.uploadImage(imagePath);
-        homePage.checkHomePageTitle("Feed");
+        createPostsPage.checkUploadedImage();
 
     }
 
-    //  ******* ID 125  Creating a post with valid image format (png)  ********  Expected: home page is visible    что проверить ?
+    //  ******* ID 125  Creating a post with valid image format (png)  ********  Expected: home page is visible
     // +
     @Test
     public void createPostUserWithValidImagePng () {
@@ -139,11 +151,10 @@ public class CreatePostTest extends BaseTest{
         createPostsPage.inputPostDescriptionField("Image big size Description");
         createPostsPage.inputPostContentField("Image big size content");
         createPostsPage.uploadImage(imagePath);
-        homePage.checkHomePageTitle("Feed");
-
+        createPostsPage.checkUploadedImage();
     }
 
-    //  ******* ID 122  Creating a post with invalid image format (gif)  ********  Expected: error message
+    //  ******* ID 122  Creating a post with invalid image format (gif)  ********  Expected: error message "The image format should be only: jpg, jpeg, png"
     // -
     @Test
     public void createPostUserWithInValidImageGif () {

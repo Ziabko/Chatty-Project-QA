@@ -1,7 +1,6 @@
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.enabled;
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -14,10 +13,13 @@ public class CreatePostsPage {
     private SelenideElement submitButton = $("button");
     private SelenideElement titleOfCreatedPost = $(".post-content__top h3");
     private SelenideElement uploadImageField = $(".post_dropzone__TA6PN  input");
+    private SelenideElement datePublishingPostField = $("#publishDate");
+    private SelenideElement uploadedImage = $(".post_uploaded_image__7qSWV:first-child");
     private SelenideElement errorMessageUploadImage = $(".post_error_message__FQTrb");
     private SelenideElement errorMessageEmptyTitle = $(".form-group:first-child .error");
     private SelenideElement errorMessageEmptyDescription = $x(".form-group:nth-child(2) .error");
     private SelenideElement errorMessageEmptyContent = $x("//*[@id=\"root\"]/div[2]/div[2]/div/form/div[3]/p");
+
 
 
     public void clickCreatePostIcon(){
@@ -71,15 +73,25 @@ public class CreatePostsPage {
         submitButton.shouldNot(enabled);
     }
 
+    public void inputDatePublishingPostField(String yesterdayDate) {
+        datePublishingPostField.setValue(yesterdayDate);
+    }
+
     public void uploadImage (String imageFilePath) {
         uploadImageField.uploadFile(new java.io.File(imageFilePath));
                }
+
+    public void checkUploadedImage(){
+        uploadedImage.shouldHave(attributeMatching("src", ".+"));
+    }
 
     public void checkErrorMessageUploadImage (String expectedErrorMessageUploadImage){
         errorMessageUploadImage.shouldHave(text(expectedErrorMessageUploadImage));
     }
 
     }
+
+
 
 
 
