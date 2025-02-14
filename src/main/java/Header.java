@@ -2,6 +2,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class Header {
@@ -17,8 +18,8 @@ public class Header {
         logoutUserProfil.click();
     }
     public void userProfileEntrance (){
-        helloUser.click();
-        userProfile.click();
+        helloUser.shouldBe(visible).click();
+        userProfile.shouldBe(visible).click();
     }
     public void clickHomeLink(){
         homeLink.click();

@@ -2,6 +2,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 import java.io.File;
+import java.nio.file.Paths;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
@@ -19,58 +20,57 @@ public class UserRegistrationPage {
     private SelenideElement saveButton = $(".save__btn");
     private SelenideElement usersAvatar = $(".upper-block input");
 
-    public void clickEditPlusButton(){
-        editPlusIcon.click();
+    public void clickEditPlusButton() {
+        editPlusIcon.shouldBe(visible).click();
     }
-    public void enterUserNameField(String userName){
+
+    public void enterUserNameField(String userName) {
         userNameField.setValue(userName);
     }
-    public void enterUserSurnameField(String userSurname){
+
+    public void enterUserSurnameField(String userSurname) {
         userSurnameField.setValue(userSurname);
     }
-    public void selectUserBirthDateField(String userBirthDate){
+
+    public void selectUserBirthDateField(String userBirthDate) {
         userBirthDateField.setValue(userBirthDate);
     }
-    public void activateBirthDateField(String birthDateFieldActiv){
+
+    public void activateBirthDateField(String birthDateFieldActiv) {
         userBirthDateField.setValue(birthDateFieldActiv);
     }
+
     public String getUserBirthDateFieldValue() {
         return userBirthDateField.getValue();
     }
-    public void clickUserBirthDateField(){
+
+    public void clickUserBirthDateField() {
         userBirthDateField.click();
     }
-    public void inputUserPhoneField(String userPhoneNumber){
+
+    public void inputUserPhoneField(String userPhoneNumber) {
         userPhoneField.setValue(userPhoneNumber);
     }
-    public void selectUserGender(String userGender){
+
+    public void selectUserGender(String userGender) {
         dropDownGender.click();
         dropDownGender.selectOption(userGender);
     }
-    public  void clickSaveButton(){
+
+    public void clickSaveButton() {
         saveButton.click();
     }
-    public  void checkSaveButtonIsDisabled(){
+
+    public void checkSaveButtonIsDisabled() {
         saveButton.shouldNotBe(enabled);
     }
-    public void uploadUserAvatar(String imageFilePath){
-        usersAvatar.uploadFile(new File (imageFilePath));
+
+    public void uploadUserAvatar(String imageFilePath) {
+        usersAvatar.uploadFile(new File(imageFilePath));
     }
-//    public void uploadedAvatarImageIsVisible() {
-//        usersAvatar.shouldBe(visible);
-//    }
-//    public void checkUploadedAvatarSrc(String expectedFileName) {
-//        usersAvatar.shouldHave(Condition.attributeMatching("src", ".*" + expectedFileName + ".*"));
-//    }
 
 
 
 
+    }
 
-
-
-
-
-
-
-}

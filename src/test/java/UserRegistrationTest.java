@@ -1,4 +1,7 @@
+import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
+
+import java.nio.file.Paths;
 
 import static com.codeborne.selenide.Selenide.sleep;
 
@@ -14,9 +17,11 @@ public class UserRegistrationTest extends BaseTest {
         userRegistrationPage.clickEditPlusButton();
         userRegistrationPage.enterUserNameField(userName);
         userRegistrationPage.enterUserSurnameField("Roberts");
-        userRegistrationPage.selectUserBirthDateField("15.06.2000");
+        userRegistrationPage.selectUserBirthDateField("15.08.2000");
+
         userRegistrationPage.inputUserPhoneField("123456789");
         userRegistrationPage.selectUserGender("MALE");
+        sleep(5000);
         userRegistrationPage.clickSaveButton();
         header.clickHomeLink();
         homePage.checkHomePageUserName(userName);
@@ -124,21 +129,23 @@ public class UserRegistrationTest extends BaseTest {
         userRegistrationPage.checkSaveButtonIsDisabled();
     }
 
-    // ***** ID 140  User registration. Upload avatar photo  ********  Expected: Avatar photo uploaded      как проверить, что картинка загружена?
+    // ***** ID 140  User registration. Upload avatar photo  ********  Expected: Avatar photo uploaded      проверить, что картинка поменялась
     @Test
-    public void uploadAvatarPhoto(){
-        String imagePath = "src/test/resourse/images/smallimage.jpg";
-        loginPage.successLogin("benaffleck@gmail.com", "benaffleck123");
-        sleep(3000);
+        public void avatarImageUpload(){
+        String avatarImage = "src/test/resourse/images/smallimage.jpg";
+        loginPage.successLogin("arnold@gmail.com", "arnold123");
         header.userProfileEntrance();
         userRegistrationPage.clickEditPlusButton();
-        userRegistrationPage.uploadUserAvatar(imagePath);
-//        userRegistrationPage.uploadedAvatarImageIsVisible();
-//        userRegistrationPage.checkUploadedAvatarSrc("smallimage.jpg");
+        userRegistrationPage.uploadUserAvatar(avatarImage);
+        sleep(3000);
+
+  }
+
+
 
     }
 
-    }
+
 
 
 

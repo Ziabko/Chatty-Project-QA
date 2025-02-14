@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="user registration">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ViewingAndEditingContentPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ViewingAndEditingContentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Header.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserRegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserRegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CreatePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreatePostTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,6 +72,7 @@
     "JUnit.LoginTest.invalidUsername.executor": "Run",
     "JUnit.LoginTest.successAdminLogin.executor": "Run",
     "JUnit.LoginTest.successUserLogin.executor": "Run",
+    "JUnit.UserRegistrationTest.avatarImageUpload.executor": "Run",
     "JUnit.UserRegistrationTest.registrationWithValidData.executor": "Run",
     "JUnit.UserRegistrationTest.uploadAvatarPhoto.executor": "Run",
     "JUnit.UserRegistrationTest.userRegistrationWithEmptyName.executor": "Run",
@@ -79,6 +81,7 @@
     "JUnit.UserRegistrationTest.userRegistrationWithInvalidName.executor": "Run",
     "JUnit.UserRegistrationTest.userRegistrationWithInvalidSurname.executor": "Run",
     "JUnit.UserRegistrationTest.userRegistrationWithUnselectedGender.executor": "Run",
+    "JUnit.UserRegistrationTest.userRegistrationWithValidData.executor": "Run",
     "JUnit.UserRegistrationTest.userRegistrationWithValidDataWithEmptyPhone.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -96,22 +99,12 @@
       <recent name="C:\Tel_Ran\Chatty-Project-QA\src\test\resourse\images" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserRegistrationTest.uploadAvatarPhoto">
-    <configuration name="CreatePostTest.createPostUserWithBigImageSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ViewingAndEditingContentTest.viewingAndSelectingPost">
+    <configuration name="UserRegistrationTest.avatarImageUpload" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreatePostTest" />
-      <option name="METHOD_NAME" value="createPostUserWithBigImageSize" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreatePostTest.createPostUserWithValidImageJpg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qa-project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreatePostTest" />
-      <option name="METHOD_NAME" value="createPostUserWithValidImageJpg" />
+      <option name="MAIN_CLASS_NAME" value="UserRegistrationTest" />
+      <option name="METHOD_NAME" value="avatarImageUpload" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,21 +120,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRegistrationTest.userRegistrationWithInvalidSurname" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserRegistrationTest.userRegistrationWithValidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UserRegistrationTest" />
-      <option name="METHOD_NAME" value="userRegistrationWithInvalidSurname" />
+      <option name="METHOD_NAME" value="userRegistrationWithValidData" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRegistrationTest.userRegistrationWithUnselectedGender" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ViewingAndEditingContentTest.viewingAndSelectingPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserRegistrationTest" />
-      <option name="METHOD_NAME" value="userRegistrationWithUnselectedGender" />
+      <option name="MAIN_CLASS_NAME" value="ViewingAndEditingContentTest" />
+      <option name="METHOD_NAME" value="viewingAndSelectingPost" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ViewingAndEditingContentTest.viewingPostFeed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qa-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ViewingAndEditingContentTest" />
+      <option name="METHOD_NAME" value="viewingPostFeed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -149,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ViewingAndEditingContentTest.viewingAndSelectingPost" />
+        <item itemvalue="JUnit.ViewingAndEditingContentTest.viewingPostFeed" />
+        <item itemvalue="JUnit.UserRegistrationTest.avatarImageUpload" />
         <item itemvalue="JUnit.UserRegistrationTest.uploadAvatarPhoto" />
-        <item itemvalue="JUnit.CreatePostTest.createPostUserWithValidImageJpg" />
-        <item itemvalue="JUnit.CreatePostTest.createPostUserWithBigImageSize" />
-        <item itemvalue="JUnit.UserRegistrationTest.userRegistrationWithUnselectedGender" />
-        <item itemvalue="JUnit.UserRegistrationTest.userRegistrationWithInvalidSurname" />
+        <item itemvalue="JUnit.UserRegistrationTest.userRegistrationWithValidData" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739393865935</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="user registration">
+      <option name="closed" value="true" />
+      <created>1739448134746</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739448134746</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

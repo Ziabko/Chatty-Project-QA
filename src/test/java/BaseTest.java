@@ -19,6 +19,7 @@ public class BaseTest {
     CreateAccountPage createAccountPage = new CreateAccountPage();
     CreatePostsPage createPostsPage = new CreatePostsPage();
     UserRegistrationPage userRegistrationPage = new UserRegistrationPage();
+    ViewingAndEditingContentPage viewingAndEditingContentPage = new ViewingAndEditingContentPage();
 
 
 }
