@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class ContactPage {
 
     private SelenideElement contactPageTitle = $("h1");
-    private SelenideElement nameField = $("#name");
+    private SelenideElement userNameField = $("#name");
     private SelenideElement emailField = $("#email");
     private SelenideElement contentField = $("#content");
     private SelenideElement sendMessageButton = $("button");
@@ -19,7 +19,7 @@ public class ContactPage {
     }
 
     public void inputNameField(String name){
-        nameField.setValue(name);
+        userNameField.setValue(name);
     }
 
     public void inputEmailField(String email){
@@ -35,6 +35,26 @@ public class ContactPage {
     }
     public void checkSuccessMessage(String expectedSuccessMessage){
         successMessage.shouldHave(text(expectedSuccessMessage));
+    }
+    public void clearUserNameField() {
+        userNameField.clear();
+    }
+    public void clearEmailField() {
+        emailField.clear();
+    }
+    public void clearContentField() {
+        contentField.clear();
+    }
+    public SelenideElement getErrorMessageEmptyNameField(String expectedErrorMessageEmptyName) {
+        return userNameField.shouldHave(Condition.attribute("validationMessage", expectedErrorMessageEmptyName));
+    }
+
+    public SelenideElement getErrorMessageEmptyEmailField(String expectedErrorMessageEmptyEmail) {
+        return emailField.shouldHave(Condition.attribute("validationMessage", expectedErrorMessageEmptyEmail));
+    }
+
+    public SelenideElement getErrorMessageEmptyContentField(String expectedErrorMessageEmptyContent) {
+        return contentField.shouldHave(Condition.attribute("validationMessage", expectedErrorMessageEmptyContent));
     }
 
 
