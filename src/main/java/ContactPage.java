@@ -13,6 +13,9 @@ public class ContactPage {
     private SelenideElement contentField = $("#content");
     private SelenideElement sendMessageButton = $("button");
     private SelenideElement successMessage = $(".success-message");
+    private SelenideElement errorMessageEmail =$(".form-item:nth-child(2) .error");
+
+
 
     public void checkContactPageTitle(String expectedTitle){
         contactPageTitle.shouldBe(visible).shouldHave(text(expectedTitle));
@@ -45,17 +48,25 @@ public class ContactPage {
     public void clearContentField() {
         contentField.clear();
     }
-    public SelenideElement getErrorMessageEmptyNameField(String expectedErrorMessageEmptyName) {
-        return userNameField.shouldHave(Condition.attribute("validationMessage", expectedErrorMessageEmptyName));
+    public void getErrorMessageEmptyNameField(String expectedErrorMessageEmptyName) {
+       userNameField.shouldHave(Condition.attribute("validationMessage", expectedErrorMessageEmptyName));
     }
 
-    public SelenideElement getErrorMessageEmptyEmailField(String expectedErrorMessageEmptyEmail) {
-        return emailField.shouldHave(Condition.attribute("validationMessage", expectedErrorMessageEmptyEmail));
+    public void getErrorMessageEmptyEmailField(String expectedErrorMessageEmptyEmail) {
+       emailField.shouldHave(Condition.attribute("validationMessage", expectedErrorMessageEmptyEmail));
     }
 
-    public SelenideElement getErrorMessageEmptyContentField(String expectedErrorMessageEmptyContent) {
-        return contentField.shouldHave(Condition.attribute("validationMessage", expectedErrorMessageEmptyContent));
+    public void getErrorMessageEmptyContentField(String expectedErrorMessageEmptyContent) {
+       contentField.shouldHave(Condition.attribute("validationMessage", expectedErrorMessageEmptyContent));
     }
+
+   public void getErrorMessageInvalidEmailWithoutAt (String expectedTextMessage){
+       errorMessageEmail.shouldHave(text(expectedTextMessage));
+   }
+    public void checkUnsuccessfulMessage(String expectedText){
+        successMessage.shouldNotHave(text(expectedText));
+    }
+
 
 
 

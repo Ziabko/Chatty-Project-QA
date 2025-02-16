@@ -45,7 +45,6 @@ public class ContactTest extends BaseTest {
         contactPage.clearEmailField();
         contactPage.inputContentField("Suggestions for site improvements");
         contactPage.clickSendMessageButton();
-        sleep(3000);
         contactPage.getErrorMessageEmptyEmailField("Заполните это поле.");   // текст сообщения может меняться
     }
 
@@ -61,9 +60,66 @@ public class ContactTest extends BaseTest {
         contactPage.inputEmailField("z0667272624@gmail.com");
         contactPage.clearContentField();
         contactPage.clickSendMessageButton();
-        sleep(3000);
         contactPage.getErrorMessageEmptyContentField("Заполните это поле.");   // текст сообщения может меняться
     }
+
+    // ******* ID 109   Feedback - Contact. Send message wit invalid email (without @)  ********    Expected: error message "Invalid email format"
+    // +
+    @Test
+    public void createContactMessageWithInvalidEmailWithoutAt(){
+        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        header.clickContactLink();
+        contactPage.checkContactPageTitle("Contact Us");
+        contactPage.inputNameField("Olga");
+        contactPage.inputEmailField("z0667272624gmail.com");
+        contactPage.getErrorMessageInvalidEmailWithoutAt("Invalid email format");
+
+    }
+
+    // ******* ID 110   Feedback - Contact. Send message wit invalid name (more than 30 symbols)  ********  Expected: the successfully submitted message is not visible
+    // -
+    @Test
+    public void createContactMessageWithInvalidName(){
+        String longTextName = "A".repeat(32);
+        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        header.clickContactLink();
+        contactPage.checkContactPageTitle("Contact Us");
+        contactPage.inputNameField(longTextName);
+        contactPage.inputEmailField("z0667272624@gmail.com");
+        contactPage.inputContentField("Suggestions for site improvements");
+        contactPage.clickSendMessageButton();
+        contactPage.checkSuccessMessage("Feedback submitted successfully!");
+    }
+
+    // ******* ID 111   Feedback - Contact. Send message wit invalid content (more than 1000 symbols)  ********  Expected: the successfully submitted message is not visible
+    // +
+    @Test
+    public void createContactMessageWithInvalidContentLang(){
+        String longTextContent = "A".repeat(1001);
+        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        header.clickContactLink();
+        contactPage.checkContactPageTitle("Contact Us");
+        contactPage.inputNameField("Olga");
+        contactPage.inputEmailField("z0667272624@gmail.com");
+        contactPage.inputContentField(longTextContent);
+        contactPage.clickSendMessageButton();
+        contactPage.checkSuccessMessage("Feedback submitted successfully!");
+    }
+
+    // ******* ID 113   Feedback - Contact. Send message wit invalid content (more than 1000 symbols)  ********  Expected: the successfully submitted message is not visible
+    // -
+    @Test
+    public void createContactMessageWithInvalidContentShort(){
+        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        header.clickContactLink();
+        contactPage.checkContactPageTitle("Contact Us");
+        contactPage.inputNameField("Olga");
+        contactPage.inputEmailField("z0667272624@gmail.com");
+        contactPage.inputContentField("fr");
+        contactPage.clickSendMessageButton();
+        contactPage.checkSuccessMessage("Feedback submitted successfully!");
+    }
+
 
 
     }

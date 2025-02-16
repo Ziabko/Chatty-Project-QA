@@ -7,7 +7,9 @@
     <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="pages, contact us">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ContactPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ContactPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewingAndEditingContentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewingAndEditingContentPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ContactTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ViewingAndEditingContentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ViewingAndEditingContentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +48,13 @@
     "JUnit.ContactTest.createContactMessageWithEmptyContent.executor": "Run",
     "JUnit.ContactTest.createContactMessageWithEmptyEmail.executor": "Run",
     "JUnit.ContactTest.createContactMessageWithEmptyName.executor": "Run",
+    "JUnit.ContactTest.createContactMessageWithInvalidContent.executor": "Run",
+    "JUnit.ContactTest.createContactMessageWithInvalidContentLang.executor": "Run",
+    "JUnit.ContactTest.createContactMessageWithInvalidContentShort.executor": "Run",
+    "JUnit.ContactTest.createContactMessageWithInvalidContentЫhort.executor": "Run",
+    "JUnit.ContactTest.createContactMessageWithInvalidEmail.executor": "Run",
+    "JUnit.ContactTest.createContactMessageWithInvalidEmailWithoutAt.executor": "Run",
+    "JUnit.ContactTest.createContactMessageWithInvalidName.executor": "Run",
     "JUnit.ContactTest.createContactMessageWithValidDate.executor": "Run",
     "JUnit.CreateAccountTest.createAccountWithAdminStatus.executor": "Run",
     "JUnit.CreateAccountTest.createAccountWithEmptyConfirmPassword.executor": "Run",
@@ -85,6 +94,7 @@
     "JUnit.UserRegistrationTest.userRegistrationWithUnselectedGender.executor": "Run",
     "JUnit.UserRegistrationTest.userRegistrationWithValidData.executor": "Run",
     "JUnit.UserRegistrationTest.userRegistrationWithValidDataWithEmptyPhone.executor": "Run",
+    "JUnit.ViewingAndEditingContentTest.DeleteMyUserPost.executor": "Run",
     "JUnit.ViewingAndEditingContentTest.viewingAndSelectingPost.executor": "Run",
     "JUnit.ViewingAndEditingContentTest.viewingPostFeed.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -103,52 +113,52 @@
       <recent name="C:\Tel_Ran\Chatty-Project-QA\src\test\resourse\images" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ContactTest.createContactMessageWithEmptyContent">
-    <configuration name="ContactTest.createContactMessageWithEmptyContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ContactTest.createContactMessageWithInvalidContentLang">
+    <configuration name="ContactTest.createContactMessageWithInvalidContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ContactTest" />
-      <option name="METHOD_NAME" value="createContactMessageWithEmptyContent" />
+      <option name="METHOD_NAME" value="createContactMessageWithInvalidContent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactTest.createContactMessageWithEmptyEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactTest.createContactMessageWithInvalidContentLang" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ContactTest" />
-      <option name="METHOD_NAME" value="createContactMessageWithEmptyEmail" />
+      <option name="METHOD_NAME" value="createContactMessageWithInvalidContentLang" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactTest.createContactMessageWithEmptyName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactTest.createContactMessageWithInvalidContentShort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ContactTest" />
-      <option name="METHOD_NAME" value="createContactMessageWithEmptyName" />
+      <option name="METHOD_NAME" value="createContactMessageWithInvalidContentShort" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactTest.createContactMessageWithValidDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactTest.createContactMessageWithInvalidContentЫhort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ContactTest" />
-      <option name="METHOD_NAME" value="createContactMessageWithValidDate" />
+      <option name="METHOD_NAME" value="createContactMessageWithInvalidContentЫhort" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreatePostTest.createPostUserWithInvalidDeferredPublicationDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactTest.createContactMessageWithInvalidName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreatePostTest" />
-      <option name="METHOD_NAME" value="createPostUserWithInvalidDeferredPublicationDate" />
+      <option name="MAIN_CLASS_NAME" value="ContactTest" />
+      <option name="METHOD_NAME" value="createContactMessageWithInvalidName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ContactTest.createContactMessageWithEmptyContent" />
-        <item itemvalue="JUnit.ContactTest.createContactMessageWithEmptyEmail" />
-        <item itemvalue="JUnit.ContactTest.createContactMessageWithEmptyName" />
-        <item itemvalue="JUnit.ContactTest.createContactMessageWithValidDate" />
-        <item itemvalue="JUnit.CreatePostTest.createPostUserWithInvalidDeferredPublicationDate" />
+        <item itemvalue="JUnit.ContactTest.createContactMessageWithInvalidContentLang" />
+        <item itemvalue="JUnit.ContactTest.createContactMessageWithInvalidName" />
+        <item itemvalue="JUnit.ContactTest.createContactMessageWithInvalidContentShort" />
+        <item itemvalue="JUnit.ContactTest.createContactMessageWithInvalidContentЫhort" />
+        <item itemvalue="JUnit.ContactTest.createContactMessageWithInvalidContent" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739530888839</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="pages, contact us">
+      <option name="closed" value="true" />
+      <created>1739645958646</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1739645958646</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
