@@ -15,11 +15,12 @@ public class UserRegistrationPage {
     private SelenideElement userSurnameField = $("[name=\"surname\"]");
     private SelenideElement userBirthDateField = $("[name=\"birthDate\"]");
     private SelenideElement userPhoneField = $("[name=\"phone\"]");
-    private SelenideElement changePasswordButton = $(".pass__btn");
     private SelenideElement dropDownGender = $("#gender");
     private SelenideElement saveButton = $(".save__btn");
     private SelenideElement usersAvatar = $(".upper-block input");
     private SelenideElement oldAvatar = $(".user_avatar_container__R0kVm img");
+
+
 
     public void clickEditPlusButton() {
         editPlusIcon.shouldBe(visible).click();
@@ -78,6 +79,10 @@ public class UserRegistrationPage {
     // Проверка, что src изменился
     public void verifyAvatarSrcIsUpdated(String initialSrc) {
         oldAvatar.shouldNotHave(Condition.attribute("src", initialSrc));
+    }
+
+    public void clearUserName(){
+        userNameField.clear();
     }
 
 
