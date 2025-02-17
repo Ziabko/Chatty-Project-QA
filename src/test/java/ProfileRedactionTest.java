@@ -6,14 +6,15 @@ public class ProfileRedactionTest extends BaseTest {
     public void ProfilePasswordRedactionTest(){
         loginPage.successLogin("Mochalka1995@gmail.com", "barrel1995");
         header.selectYouProfilePage();
-        userRegistrationPage.clickEditPlusButton();
         header.userProfileEntrance();
+        userRegistrationPage.clickEditPlusButton();
         profileRedactionPage.clickChangePasswordButton();
         profileRedactionPage.checkChangeOldPasswordField("barrel1995");
         profileRedactionPage.checkChangeNewPasswordField("barrel95");
         profileRedactionPage.checkChangeConfirmNewPasswordField("barrel95");
         profileRedactionPage.clickSaveChangePasswordButton();
         userRegistrationPage.clickSaveButton();
+        header.userProfileEntrance();
         header.selectLogoutProfile();
         loginPage.successLogin("Mochalka1995@gmail.com", "barrel95");
         homePage.checkHomePageTitle("Feed");

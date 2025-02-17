@@ -34,7 +34,7 @@ public class Header {
     // /////*************************************
 
     public  void selectYouProfilePage (){
-        helloUser.click();
+        helloUser.shouldBe(visible).click();
     }
 
     public void selectLogoutProfile(){

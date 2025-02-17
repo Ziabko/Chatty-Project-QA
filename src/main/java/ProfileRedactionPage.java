@@ -5,10 +5,10 @@ import static com.codeborne.selenide.Selenide.$;
 public class ProfileRedactionPage {
 
 
-    private SelenideElement changePasswordButton =$("data-test=\"profileChangePasswordButton\"");
-    private SelenideElement changeOldPasswordField =$("placeholder=\"Old password\"");
-    private SelenideElement changeNewPasswordField =$("placeholder=\"New password\"");
-    private SelenideElement changeConfirmNewPasswordField =$("placeholder=\"Confirm new password\"");
+    private SelenideElement changePasswordButton =$(".pass__btn");
+    private SelenideElement changeOldPasswordField =$("[placeholder=\"Old password\"]");
+    private SelenideElement changeNewPasswordField =$("[placeholder=\"New password\"]");
+    private SelenideElement changeConfirmNewPasswordField =$("[placeholder=\"Confirm new password\"]");
     private SelenideElement saveChangePasswordButton =$(".PasswordModal_pass_btn__eGL9h");
 
 

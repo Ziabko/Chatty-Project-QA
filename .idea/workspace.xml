@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="contact us">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ProfileRedactionPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ProfileRedactionTest.java" afterDir="false" />
+    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="redaction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Header.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProfileRedactionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProfileRedactionPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProfileRedactionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProfileRedactionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739737378161</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="redaction">
+      <option name="closed" value="true" />
+      <created>1739781542235</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1739781542235</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,6 +320,7 @@
     <MESSAGE value="viewing" />
     <MESSAGE value="pages, contact us" />
     <MESSAGE value="contact us" />
-    <option name="LAST_COMMIT_MESSAGE" value="contact us" />
+    <MESSAGE value="redaction" />
+    <option name="LAST_COMMIT_MESSAGE" value="redaction" />
   </component>
 </project>
