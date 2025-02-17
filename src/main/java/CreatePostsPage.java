@@ -16,56 +16,53 @@ public class CreatePostsPage {
     private SelenideElement datePublishingPostField = $("#publishDate");
     private SelenideElement uploadedImage = $(".post_uploaded_image__7qSWV:first-child");
     private SelenideElement errorMessageUploadImage = $(".post_error_message__FQTrb");
-    private SelenideElement errorMessageEmptyTitle = $(".form-group:first-child .error");
-    private SelenideElement errorMessageEmptyDescription = $x(".form-group:nth-child(2) .error");
-    private SelenideElement errorMessageEmptyContent = $x("//*[@id=\"root\"]/div[2]/div[2]/div/form/div[3]/p");
+
+//    private SelenideElement errorMessageEmptyTitle = $(".form-group:first-child .error");
+//    private SelenideElement errorMessageEmptyDescription = $x(".form-group:nth-child(2) .error");
+//    private SelenideElement errorMessageEmptyContent = $x("//*[@id=\"root\"]/div[2]/div[2]/div/form/div[3]/p");
 
 
-
-    public void clickCreatePostIcon(){
-        createPostIcon.click();
+    public void clickCreatePostIcon() {
+        createPostIcon.shouldBe(visible).click();
     }
 
-    public void inputPostTitleField(String titleValidValue){
+    public void inputPostTitleField(String titleValidValue) {
         postTitleField.setValue(titleValidValue);
     }
 
-    public void inputPostDescriptionField(String descriptionValidValue){
+    public void inputPostDescriptionField(String descriptionValidValue) {
         postDescriptionField.setValue(descriptionValidValue);
     }
-    public void inputPostContentField(String contentValidValue){
-         postСontentField.setValue(contentValidValue);
+
+    public void inputPostContentField(String contentValidValue) {
+        postСontentField.setValue(contentValidValue);
     }
 
-    public void clickSubmitButton(){
+    public void clickSubmitButton() {
         submitButton.click();
     }
 
     public void checkTitleOfCreatedPost(String expectedTitleOfCreatedPost) {
-        titleOfCreatedPost.shouldHave(text(expectedTitleOfCreatedPost));
+        titleOfCreatedPost.shouldBe(visible).shouldHave(text(expectedTitleOfCreatedPost));
     }
 
-    public void titleErrorTextMessage(String expectedTitleErrorTextMessage){
-        errorMessageEmptyTitle.shouldHave(text(expectedTitleErrorTextMessage));
-    }
-
-    public void descriptionErrorTextMessage(String expectedDescriptionErrorTextMessage){
-        errorMessageEmptyDescription.shouldHave(text(expectedDescriptionErrorTextMessage));
-    }
-
-    public void contentTextMessage(String expectedContentErrorTextMessage){
-        errorMessageEmptyContent.shouldHave(text(expectedContentErrorTextMessage));
-    }
-
-    public void clearDescriptionFiled(){
-        postDescriptionField.clear();
-    }
-
+    //    public void titleErrorTextMessage(String expectedTitleErrorTextMessage){
+//        errorMessageEmptyTitle.shouldHave(text(expectedTitleErrorTextMessage));
+//    }
+//    public void descriptionErrorTextMessage(String expectedDescriptionErrorTextMessage){
+//        errorMessageEmptyDescription.shouldHave(text(expectedDescriptionErrorTextMessage));
+//    }
+//    public void contentTextMessage(String expectedContentErrorTextMessage){
+//        errorMessageEmptyContent.shouldHave(text(expectedContentErrorTextMessage));
+//    }
+//    public void clearDescriptionFiled(){
+//        postDescriptionField.clear();
+//    }
     public void clearContentFiled() {
         postСontentField.clear();
     }
 
-    public void clearTitleFiled(){
+    public void clearTitleFiled() {
         postTitleField.clear();
     }
 
@@ -77,19 +74,19 @@ public class CreatePostsPage {
         datePublishingPostField.setValue(yesterdayDate);
     }
 
-    public void uploadImage (String imageFilePath) {
+    public void uploadImage(String imageFilePath) {
         uploadImageField.uploadFile(new java.io.File(imageFilePath));
-               }
+    }
 
-    public void checkUploadedImage(){
+    public void checkUploadedImage() {
         uploadedImage.shouldHave(attributeMatching("src", ".+"));
     }
 
-    public void checkErrorMessageUploadImage (String expectedErrorMessageUploadImage){
-        errorMessageUploadImage.shouldHave(text(expectedErrorMessageUploadImage));
+    public void checkErrorMessageUploadImage(String expectedErrorMessage) {
+        errorMessageUploadImage.shouldHave(text(expectedErrorMessage));
     }
 
-    }
+}
 
 
 

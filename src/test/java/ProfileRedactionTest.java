@@ -6,22 +6,22 @@ public class ProfileRedactionTest extends BaseTest {
     // +
     @Test
     public void profilePasswordRedactionTest(){
-        loginPage.successLogin("Mochalka1995@gmail.com", "barrel1995");
-//        header.selectYouProfilePage();
+        String oldPassword = "barrel95";
+        String newPassword = "barrel1995";
+        loginPage.successLogin("Mochalka1995@gmail.com", oldPassword);
         header.userProfileEntrance();
         userRegistrationPage.clickEditPlusButton();
         profileRedactionPage.clickChangePasswordButton();
-        profileRedactionPage.checkChangeOldPasswordField("barrel1995");
-        profileRedactionPage.checkChangeNewPasswordField("barrel95");
-        profileRedactionPage.checkChangeConfirmNewPasswordField("barrel95");
+        profileRedactionPage.checkChangeOldPasswordField(oldPassword);
+        profileRedactionPage.checkChangeNewPasswordField(newPassword);
+        profileRedactionPage.checkChangeConfirmNewPasswordField(newPassword);
         profileRedactionPage.clickSaveChangePasswordButton();
         userRegistrationPage.clickSaveButton();
         header.userProfileEntrance();
-        header.selectLogoutProfile();
-        loginPage.successLogin("Mochalka1995@gmail.com", "barrel95");
+        header.logoutYouProfile();
+        loginPage.successLogin("Mochalka1995@gmail.com", newPassword);
         homePage.checkHomePageTitle("Feed");
     }
-
 
     //  **********  Editing your profile.   Editing a profile with a name change   ********* Expected: profile saved
     // +

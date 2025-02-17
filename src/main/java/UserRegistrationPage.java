@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class UserRegistrationPage {
 
-    private SelenideElement personalInformationTitle = $(".post-header__feed");
+
     private SelenideElement editPlusIcon = $("[data-test=\"post-header__plus\"]");
     private SelenideElement userNameField = $("[name=\"name\"]");
     private SelenideElement userSurnameField = $("[name=\"surname\"]");
@@ -19,7 +19,6 @@ public class UserRegistrationPage {
     private SelenideElement saveButton = $(".save__btn");
     private SelenideElement usersAvatar = $(".upper-block input");
     private SelenideElement oldAvatar = $(".user_avatar_container__R0kVm img");
-
 
 
     public void clickEditPlusButton() {
@@ -36,18 +35,6 @@ public class UserRegistrationPage {
 
     public void selectUserBirthDateField(String userBirthDate) {
         userBirthDateField.setValue(userBirthDate);
-    }
-
-    public void activateBirthDateField(String birthDateFieldActiv) {
-        userBirthDateField.setValue(birthDateFieldActiv);
-    }
-
-    public String getUserBirthDateFieldValue() {
-        return userBirthDateField.getValue();
-    }
-
-    public void clickUserBirthDateField() {
-        userBirthDateField.click();
     }
 
     public void inputUserPhoneField(String userPhoneNumber) {
@@ -76,17 +63,14 @@ public class UserRegistrationPage {
         return usersAvatar.getAttribute("src");
     }
 
-    // Проверка, что src изменился
     public void verifyAvatarSrcIsUpdated(String initialSrc) {
         oldAvatar.shouldNotHave(Condition.attribute("src", initialSrc));
     }
 
-    public void clearUserName(){
+    public void clearUserName() {
         userNameField.clear();
     }
 
 
-
-
-    }
+}
 

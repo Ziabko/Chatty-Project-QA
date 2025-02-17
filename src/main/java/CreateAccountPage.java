@@ -8,19 +8,15 @@ public class CreateAccountPage {
     private SelenideElement emailInputField = $("[name=\"email\"]");
     private SelenideElement passwordInputField = $("[name=\"password\"]");
     private SelenideElement confirmPasswordInputField = $("[name=\"confirmPassword\"]");
-    private SelenideElement selectAdminStatus = $("[value=\"admin\"]");
-    private SelenideElement selectUserStatus =$("[value='user']");
-    private SelenideElement registrationButton =$("[type=\"submit\"]");
-
-    private SelenideElement errorMessageInvalidEmail =$("div:nth-child(4)");
-    private SelenideElement errorMessageInvalidPassword =$("div:nth-child(5)");
-
+    private SelenideElement selectUserStatus = $("[value='user']");
+    private SelenideElement registrationButton = $("[type=\"submit\"]");
+    private SelenideElement errorMessageInvalidEmail = $("div:nth-child(4)");
+    private SelenideElement errorMessageInvalidPassword = $("div:nth-child(5)");
     private SelenideElement errorMessageInvalidConfirmPassword = $(".text-error");
-
     private SelenideElement dropdownSelect = $("select");
     private SelenideElement adminStatus = $("[value=\"admin\"]");
     private SelenideElement homePageTitle = $(".post-header__feed");
-    private SelenideElement alreadyExistsUsersError =$(".container .text-error");
+    private SelenideElement alreadyExistsUsersError = $(".container .text-error");
 
 
     public void enterUsername(String usernameValue) {
@@ -28,58 +24,64 @@ public class CreateAccountPage {
     }
 
     public void enterPassword(String passwordValue) {
-        passwordInputField.setValue(passwordValue);}
+        passwordInputField.setValue(passwordValue);
+    }
 
     public void enterConfirmPassword(String passwordValue) {
-        confirmPasswordInputField.setValue(passwordValue);}
-
-    public void checkUserSelect(){
-        selectUserStatus.click();}
-
-    public void clickTheRegistrationButton(){registrationButton.click();}
-
-    public void checkHomePageTitle(String expectedHomePageTitle){
-        homePageTitle.shouldHave(text(expectedHomePageTitle));
+        confirmPasswordInputField.setValue(passwordValue);
     }
 
-    public void clearEmailField (){
+    public void checkUserSelect() {
+        selectUserStatus.click();
+    }
+
+    public void clickTheRegistrationButton() {
+        registrationButton.click();
+    }
+
+    public void checkHomePageTitle(String expectedHomePageTitle) {
+        homePageTitle.shouldBe(visible).shouldHave(text(expectedHomePageTitle));
+    }
+
+    public void clearEmailField() {
         emailInputField.clear();
     }
+
     public void checkRegistrationButtonDisabled() {
         registrationButton.shouldNot(enabled);
     }
+
     public void errorMessageInvalidEmail(String expectedErrorMessageEmail) {
-        errorMessageInvalidEmail.shouldHave(text(expectedErrorMessageEmail));
+        errorMessageInvalidEmail.shouldBe(visible).shouldHave(text(expectedErrorMessageEmail));
     }
 
-    public void errorMessageTheInvalidPassword(String expectedErrorMessagePassword){
-        errorMessageInvalidPassword.shouldHave(text(expectedErrorMessagePassword));
+    public void errorMessageTheInvalidPassword(String expectedErrorMessagePassword) {
+        errorMessageInvalidPassword.shouldBe(visible).shouldHave(text(expectedErrorMessagePassword));
     }
 
-    public void clearPasswordFiled(){
+    public void clearPasswordFiled() {
         passwordInputField.clear();
     }
 
-    public void clearConfirmPasswordFiled(){
+    public void clearConfirmPasswordFiled() {
         confirmPasswordInputField.clear();
     }
 
-
-    public  void checkErrorMessageInvalidConfirmPassword(String expectedErrorMessageInvalidConfirmPassword){
-        errorMessageInvalidConfirmPassword.shouldHave(text(expectedErrorMessageInvalidConfirmPassword));
+    public void checkErrorMessageInvalidConfirmPassword(String expectedErrorMessage) {
+        errorMessageInvalidConfirmPassword.shouldHave(text(expectedErrorMessage));
     }
 
-    public void clickDropdownSelect (){
+    public void clickDropdownSelect() {
         dropdownSelect.click();
     }
-    public  void checkAdminStatus(){
+
+    public void checkAdminStatus() {
         adminStatus.shouldNotBe(visible);
     }
 
-    public void alreadyExistsUsersTextError(String expectedAlreadyExistsUsersTextError){
-        alreadyExistsUsersError.shouldHave(text(expectedAlreadyExistsUsersTextError));
+    public void alreadyExistsUsersTextError(String expectedTextError) {
+        alreadyExistsUsersError.shouldBe(visible).shouldHave(text(expectedTextError));
     }
-
 
 }
 

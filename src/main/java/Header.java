@@ -13,32 +13,22 @@ public class Header {
     private SelenideElement contactLink = $(".header__nav-list li:nth-child(3)");
 
 
-    public  void logoutYouProfile(){
+    public void logoutYouProfile() {
         helloUser.click();
         logoutUserProfil.click();
     }
-    public void userProfileEntrance (){
+
+    public void userProfileEntrance() {
         helloUser.shouldBe(visible).click();
         userProfile.shouldBe(visible).click();
     }
-    public void clickHomeLink(){
-        homeLink.click();
+
+    public void clickHomeLink() {
+        homeLink.shouldBe(visible).click();
     }
-    public void checkCreatedUserName(String expectedUserName){
-        helloUser.shouldHave(Condition.value(expectedUserName));
-    }
-    public void clickContactLink(){
+
+    public void clickContactLink() {
         contactLink.click();
-    }
-
-    // /////*************************************
-
-    public  void selectYouProfilePage (){
-        helloUser.shouldBe(visible).click();
-    }
-
-    public void selectLogoutProfile(){
-        logoutUserProfil.click();
     }
 
 }
