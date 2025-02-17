@@ -1,7 +1,6 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -14,7 +13,7 @@ public class Header {
     private SelenideElement contactLink = $(".header__nav-list li:nth-child(3)");
 
 
-    public  void selectYouProfilePage (){
+    public  void logoutYouProfile(){
         helloUser.click();
         logoutUserProfil.click();
     }
@@ -30,6 +29,16 @@ public class Header {
     }
     public void clickContactLink(){
         contactLink.click();
+    }
+
+    // /////*************************************
+
+    public  void selectYouProfilePage (){
+        helloUser.click();
+    }
+
+    public void selectLogoutProfile(){
+        logoutUserProfil.click();
     }
 
 }

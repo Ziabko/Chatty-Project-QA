@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="pages, contact us">
+    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="contact us">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ProfileRedactionPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ProfileRedactionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ContactPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ContactPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewingAndEditingContentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewingAndEditingContentPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ContactTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ViewingAndEditingContentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ViewingAndEditingContentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +84,7 @@
     "JUnit.LoginTest.invalidUsername.executor": "Run",
     "JUnit.LoginTest.successAdminLogin.executor": "Run",
     "JUnit.LoginTest.successUserLogin.executor": "Run",
+    "JUnit.ProfileRedactionTest.ProfilePasswordRedactionTest.executor": "Run",
     "JUnit.UserRegistrationTest.avatarImageUpload.executor": "Run",
     "JUnit.UserRegistrationTest.registrationWithValidData.executor": "Run",
     "JUnit.UserRegistrationTest.uploadAvatarPhoto.executor": "Run",
@@ -113,17 +115,7 @@
       <recent name="C:\Tel_Ran\Chatty-Project-QA\src\test\resourse\images" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ContactTest.createContactMessageWithInvalidContentLang">
-    <configuration name="ContactTest.createContactMessageWithInvalidContent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qa-project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ContactTest" />
-      <option name="METHOD_NAME" value="createContactMessageWithInvalidContent" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ProfileRedactionTest.ProfilePasswordRedactionTest">
     <configuration name="ContactTest.createContactMessageWithInvalidContentLang" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
@@ -164,13 +156,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProfileRedactionTest.ProfilePasswordRedactionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qa-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProfileRedactionTest" />
+      <option name="METHOD_NAME" value="ProfilePasswordRedactionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProfileRedactionTest.ProfilePasswordRedactionTest" />
         <item itemvalue="JUnit.ContactTest.createContactMessageWithInvalidContentLang" />
         <item itemvalue="JUnit.ContactTest.createContactMessageWithInvalidName" />
         <item itemvalue="JUnit.ContactTest.createContactMessageWithInvalidContentShort" />
         <item itemvalue="JUnit.ContactTest.createContactMessageWithInvalidContentЫhort" />
-        <item itemvalue="JUnit.ContactTest.createContactMessageWithInvalidContent" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739645958646</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="contact us">
+      <option name="closed" value="true" />
+      <created>1739737378161</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1739737378161</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -303,6 +313,7 @@
     <MESSAGE value="user registration" />
     <MESSAGE value="viewing" />
     <MESSAGE value="pages, contact us" />
-    <option name="LAST_COMMIT_MESSAGE" value="pages, contact us" />
+    <MESSAGE value="contact us" />
+    <option name="LAST_COMMIT_MESSAGE" value="contact us" />
   </component>
 </project>

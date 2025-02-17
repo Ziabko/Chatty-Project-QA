@@ -1,7 +1,5 @@
 
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 public class LoginTest extends BaseTest {
@@ -71,7 +69,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void accountLogoutAdminUser(){
         loginPage.successLogin("Mochalka1995@gmail.com","barrel1995");
-        header.selectYouProfilePage();
+        header.logoutYouProfile();
        loginPage.checkLoginFormTitle("Login Form");
     }
 

@@ -21,4 +21,5 @@ public class BaseTest {
     UserRegistrationPage userRegistrationPage = new UserRegistrationPage();
     ViewingAndEditingContentPage viewingAndEditingContentPage = new ViewingAndEditingContentPage();
     ContactPage contactPage = new ContactPage();
+    ProfileRedactionPage profileRedactionPage = new ProfileRedactionPage();
 }
