@@ -11,11 +11,13 @@ public class CreatePostsPage {
     private SelenideElement postDescriptionField = $(".form-group:nth-child(2) .form-control ");
     private SelenideElement postСontentField = $("[name=\"content\"]");
     private SelenideElement submitButton = $("button");
-    private SelenideElement titleOfCreatedPost = $(".post-content__top h3");
+    private SelenideElement titleOfCreatedPost = $(".post-content__top h3");  //          ????????????????????????????????????????????? проверить и поменять
+
     private SelenideElement uploadImageField = $(".post_dropzone__TA6PN  input");
     private SelenideElement datePublishingPostField = $("#publishDate");
     private SelenideElement uploadedImage = $(".post_uploaded_image__7qSWV:first-child");
     private SelenideElement errorMessageUploadImage = $(".post_error_message__FQTrb");
+    private SelenideElement saveDraftTumbler = $("#draftCheckbox");
 
 //    private SelenideElement errorMessageEmptyTitle = $(".form-group:first-child .error");
 //    private SelenideElement errorMessageEmptyDescription = $x(".form-group:nth-child(2) .error");
@@ -84,6 +86,10 @@ public class CreatePostsPage {
 
     public void checkErrorMessageUploadImage(String expectedErrorMessage) {
         errorMessageUploadImage.shouldHave(text(expectedErrorMessage));
+    }
+
+    public void clickSaveDraftTumbler(){
+        saveDraftTumbler.click();
     }
 
 }

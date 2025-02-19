@@ -170,6 +170,21 @@ public class CreatePostTest extends BaseTest{
 
     }
 
+    //  *******    Save post as a draft  ********  Expected:
+    @Test
+    public void createPostAsDraft(){
+        String expectedTitle = "Draft";
+        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        createPostsPage.clickCreatePostIcon();
+        createPostsPage.inputPostTitleField(expectedTitle);
+        createPostsPage.inputPostDescriptionField("Draft description");
+        createPostsPage.inputPostContentField("Draft content");
+        createPostsPage.clickSubmitButton();
+
+    }
+
+
+
 
 
 

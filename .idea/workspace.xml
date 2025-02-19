@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="editing name">
+    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="end redaction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AdminPanelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdminPanelPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ContactPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ContactPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CreateAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreateAccountPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CreatePostsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreatePostsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Header.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProfileRedactionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProfileRedactionPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserRegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserRegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewingAndEditingContentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewingAndEditingContentPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ProfileRedactionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProfileRedactionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ViewingAndEditingContentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ViewingAndEditingContentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CreatePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreatePostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +103,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Tel_Ran/Chatty-Project-QA/src/test/resourse/images",
+    "last_opened_file_path": "C:/Tel_Ran/QA/regresin-Api",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -125,12 +115,12 @@
       <recent name="C:\Tel_Ran\Chatty-Project-QA\src\test\resourse\images" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ViewingAndEditingContentTest.editMyUserPost">
-    <configuration name="ContactTest.createContactMessageWithInvalidContentLang" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CreatePostTest.createPostUserWithValidData">
+    <configuration name="CreatePostTest.createPostUserWithValidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ContactTest" />
-      <option name="METHOD_NAME" value="createContactMessageWithInvalidContentLang" />
+      <option name="MAIN_CLASS_NAME" value="CreatePostTest" />
+      <option name="METHOD_NAME" value="createPostUserWithValidData" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -178,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CreatePostTest.createPostUserWithValidData" />
         <item itemvalue="JUnit.ViewingAndEditingContentTest.editMyUserPost" />
         <item itemvalue="JUnit.ProfileRedactionTest.profilePasswordRedactionTest" />
         <item itemvalue="JUnit.ProfileRedactionTest.profileEditingTest" />
         <item itemvalue="JUnit.ProfileRedactionTest.ProfilePasswordRedactionTest" />
-        <item itemvalue="JUnit.ContactTest.createContactMessageWithInvalidContentLang" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739784014420</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="end redaction">
+      <option name="closed" value="true" />
+      <created>1739787313118</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1739787313118</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -351,6 +349,7 @@
     <MESSAGE value="redaction" />
     <MESSAGE value="redaction1" />
     <MESSAGE value="editing name" />
-    <option name="LAST_COMMIT_MESSAGE" value="editing name" />
+    <MESSAGE value="end redaction" />
+    <option name="LAST_COMMIT_MESSAGE" value="end redaction" />
   </component>
 </project>
