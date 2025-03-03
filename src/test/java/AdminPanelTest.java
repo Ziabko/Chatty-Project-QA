@@ -11,13 +11,6 @@ public class AdminPanelTest  extends BaseTest {
     Faker faker = new Faker();
     String userEmail = faker.internet().emailAddress();
     String userPassword = faker.internet().password();
-//    String invalidField = faker.lorem().word();
-    String phoneNumber = faker.number().digits(9);
-    String name = faker.name().firstName();
-    String surname = faker.name().lastName();
-    Date birthDate = faker.date().birthday(8, 100);
-    SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-    String formattedDate = dateFormat.format(birthDate);
 
     @Test
     public void deleteAccountUserAsAAdmin(){
@@ -55,22 +48,6 @@ public class AdminPanelTest  extends BaseTest {
         adminPanelPage.checkNotFoundEmail();
     }
 
-//    @Test
-//    public void createUserAsAAdmin(){
-//      loginPage.clickOnSingUpButton();
-//      createAccountPage.createRandomUser(userEmail, userPassword, userPassword);
-//      header.logoutYouProfile();
-//      loginPage.successLogin("zyablik2004@ukr.net", "AdminOlga1");
-//      adminPanelPage.inputEmailSearchField(userEmail);
-//        sleep(3000);
-//      adminPanelPage.clickEmailSearchButton();
-//        sleep(3000);
-//      adminPanelPage.clickEditUserButton();
-//      sleep(3000);
-//      userRegistrationPage.clickEditPlusButton();
-//      userRegistrationPage.createRandomUserInformation(name, surname, "MALE", "", "");
-//
-//    }
 
 }
 

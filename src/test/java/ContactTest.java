@@ -4,12 +4,14 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class ContactTest extends BaseTest {
+String username = "z0667272624@gmail.com";
+String password = "UserOlga1";
 
     // ******* ID 105   Feedback - Contact. Send message wit valid date.  ********    Expected: message "Your message has been successfully submitted!"
     // +
     @Test
     public void createContactMessageWithValidDate(){
-        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        loginPage.successLogin(username, password);
         header.clickContactLink();
         contactPage.checkContactPageTitle("Contact Us");
         contactPage.inputNameField("Olga");
@@ -24,7 +26,7 @@ public class ContactTest extends BaseTest {
     // +
     @Test
     public void createContactMessageWithEmptyName(){
-        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        loginPage.successLogin(username, password);
         header.clickContactLink();
         contactPage.checkContactPageTitle("Contact Us");
         contactPage.clearUserNameField();
@@ -38,7 +40,7 @@ public class ContactTest extends BaseTest {
     // +
     @Test
     public void createContactMessageWithEmptyEmail(){
-        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        loginPage.successLogin(username, password);
         header.clickContactLink();
         contactPage.checkContactPageTitle("Contact Us");
         contactPage.inputNameField("Olga");
@@ -53,7 +55,7 @@ public class ContactTest extends BaseTest {
 
     @Test
     public void createContactMessageWithEmptyContent(){
-        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        loginPage.successLogin(username, password);
         header.clickContactLink();
         contactPage.checkContactPageTitle("Contact Us");
         contactPage.inputNameField("Olga");
@@ -67,7 +69,7 @@ public class ContactTest extends BaseTest {
     // +
     @Test
     public void createContactMessageWithInvalidEmailWithoutAt(){
-        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        loginPage.successLogin(username, password);
         header.clickContactLink();
         contactPage.checkContactPageTitle("Contact Us");
         contactPage.inputNameField("Olga");
@@ -81,7 +83,7 @@ public class ContactTest extends BaseTest {
     @Test
     public void createContactMessageWithInvalidName(){
         String longTextName = "A".repeat(32);
-        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        loginPage.successLogin(username, password);
         header.clickContactLink();
         contactPage.checkContactPageTitle("Contact Us");
         contactPage.inputNameField(longTextName);
@@ -96,7 +98,7 @@ public class ContactTest extends BaseTest {
     @Test
     public void createContactMessageWithInvalidContentLang(){
         String longTextContent = "A".repeat(1001);
-        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        loginPage.successLogin(username, password);
         header.clickContactLink();
         contactPage.checkContactPageTitle("Contact Us");
         contactPage.inputNameField("Olga");
@@ -110,7 +112,7 @@ public class ContactTest extends BaseTest {
     // -
     @Test
     public void createContactMessageWithInvalidContentShort(){
-        loginPage.successLogin("z0667272624@gmail.com", "UserOlga1");
+        loginPage.successLogin(username, password);
         header.clickContactLink();
         contactPage.checkContactPageTitle("Contact Us");
         contactPage.inputNameField("Olga");
@@ -120,8 +122,6 @@ public class ContactTest extends BaseTest {
         contactPage.checkSuccessMessage("Feedback submitted successfully!");
     }
 
-
-
-    }
+ }
 
 

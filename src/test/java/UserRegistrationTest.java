@@ -1,30 +1,41 @@
 import com.codeborne.selenide.Condition;
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class UserRegistrationTest extends BaseTest {
 
+    Faker faker = new Faker();
+    String userEmail = faker.internet().emailAddress();
+    String userPassword = faker.internet().password();
+    String name = faker.name().firstName();
+    String lastname = faker.name().lastName();
+    Date randomDate = faker.date().birthday(18, 60); // Возраст от 18 до 60 лет
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+    String formattedDate = dateFormat.format(randomDate);
+    String phone = String.valueOf(faker.number().digits(9));
+
     // ***** ID 82  User registration with valid data  ********
     // +
     @Test
     public void userRegistrationWithValidData() {
-        String userName = "Julia";
-        loginPage.successLogin("user123@gmail.com", "userreg123");
+        loginPage.clickOnSingUpButton();
+        createAccountPage.createRandomUser(userEmail, userPassword, userPassword);
         header.userProfileEntrance();
         userRegistrationPage.clickEditPlusButton();
-        userRegistrationPage.enterUserNameField(userName);
-        userRegistrationPage.enterUserSurnameField("Roberts");
-        userRegistrationPage.selectUserBirthDateField("15.08.2000");
-
-        userRegistrationPage.inputUserPhoneField("123456789");
+        userRegistrationPage.enterUserNameField(name);
+        userRegistrationPage.enterUserSurnameField(lastname);
+        userRegistrationPage.selectUserBirthDateField(formattedDate);
+        userRegistrationPage.inputUserPhoneField(phone);
         userRegistrationPage.selectUserGender("MALE");
-        sleep(5000);
         userRegistrationPage.clickSaveButton();
         header.clickHomeLink();
-        homePage.checkHomePageUserName(userName);
+        homePage.checkHomePageUserName(name);
     }
 
     // ***** ID 84  User registration with empty Phone  ********  Expected: save button is not enabled

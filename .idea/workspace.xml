@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/AdminPanelTest.java" afterDir="false" />
+    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="admin test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AdminPanelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdminPanelPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CreateAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreateAccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CreatePostsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreatePostsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Header.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserRegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserRegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CreatePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreatePostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AdminPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AdminPanelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ContactTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserRegistrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,15 +43,19 @@
     "JUnit.AdminPanelTest.createUserAsAAdmin.executor": "Run",
     "JUnit.AdminPanelTest.deleteAccountUserAsAAdmin.executor": "Run",
     "JUnit.AdminPanelTest.editUserAsAAdmin.executor": "Run",
+    "JUnit.AdminPanelTest.executor": "Run",
     "JUnit.AdminPanelTest.searchUserAsAAdmin.executor": "Run",
+    "JUnit.AdminPanelTest.successSearchUserAsAAdmin.executor": "Run",
     "JUnit.AdminPanelTest.unsuccessfulSearchUserAsAAdmin.executor": "Run",
     "JUnit.ContactTest.createContactMessageWithInvalidContentShort.executor": "Run",
+    "JUnit.ContactTest.createContactMessageWithValidDate.executor": "Run",
     "JUnit.CreatePostTest.CreatePostAsDraft.executor": "Run",
     "JUnit.CreatePostTest.createPostUserWithEmptyDescription.executor": "Run",
     "JUnit.CreatePostTest.createPostUserWithValidData.executor": "Run",
     "JUnit.LoginTest.accountLogoutAdminUser.executor": "Run",
     "JUnit.LoginTest.successAdminLogin.executor": "Run",
     "JUnit.LoginTest.successUserLogin.executor": "Run",
+    "JUnit.UserRegistrationTest.userRegistrationWithValidData.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -66,17 +64,7 @@
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.AdminPanelTest.createUserAsAAdmin">
-    <configuration name="AdminPanelTest.createUserAsAAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qa-project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AdminPanelTest" />
-      <option name="METHOD_NAME" value="createUserAsAAdmin" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UserRegistrationTest.userRegistrationWithValidData">
     <configuration name="AdminPanelTest.deleteAccountUserAsAAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
@@ -87,11 +75,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminPanelTest.searchUserAsAAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminPanelTest.successSearchUserAsAAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AdminPanelTest" />
-      <option name="METHOD_NAME" value="searchUserAsAAdmin" />
+      <option name="METHOD_NAME" value="successSearchUserAsAAdmin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -107,11 +95,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreatePostTest.CreatePostAsDraft" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactTest.createContactMessageWithValidDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CreatePostTest" />
-      <option name="METHOD_NAME" value="CreatePostAsDraft" />
+      <option name="MAIN_CLASS_NAME" value="ContactTest" />
+      <option name="METHOD_NAME" value="createContactMessageWithValidDate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRegistrationTest.userRegistrationWithValidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qa-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserRegistrationTest" />
+      <option name="METHOD_NAME" value="userRegistrationWithValidData" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -119,10 +117,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AdminPanelTest.createUserAsAAdmin" />
-        <item itemvalue="JUnit.CreatePostTest.CreatePostAsDraft" />
+        <item itemvalue="JUnit.UserRegistrationTest.userRegistrationWithValidData" />
+        <item itemvalue="JUnit.ContactTest.createContactMessageWithValidDate" />
         <item itemvalue="JUnit.AdminPanelTest.unsuccessfulSearchUserAsAAdmin" />
-        <item itemvalue="JUnit.AdminPanelTest.searchUserAsAAdmin" />
+        <item itemvalue="JUnit.AdminPanelTest.successSearchUserAsAAdmin" />
         <item itemvalue="JUnit.AdminPanelTest.deleteAccountUserAsAAdmin" />
       </list>
     </recent_temporary>
@@ -136,17 +134,19 @@
       <option name="presentableId" value="Default" />
       <updated>1738922023729</updated>
     </task>
+    <task id="LOCAL-00001" summary="admin test">
+      <option name="closed" value="true" />
+      <created>1741025869585</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741025869585</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/LoginTest.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="admin test" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin test" />
   </component>
 </project>
