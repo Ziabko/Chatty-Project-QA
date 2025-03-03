@@ -18,6 +18,13 @@ public class CreateAccountPage {
     private SelenideElement homePageTitle = $(".post-header__feed");
     private SelenideElement alreadyExistsUsersError = $(".container .text-error");
 
+    public void createRandomUser(String usernameValue, String passwordValue, String confirmPasswordValue) {
+        emailInputField.setValue(usernameValue);
+        passwordInputField.setValue(passwordValue);
+        confirmPasswordInputField.setValue(confirmPasswordValue);
+        selectUserStatus.click();
+        registrationButton.click();
+    }
 
     public void enterUsername(String usernameValue) {
         emailInputField.setValue(usernameValue);

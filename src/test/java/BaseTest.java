@@ -22,4 +22,5 @@ public class BaseTest {
     ViewingAndEditingContentPage viewingAndEditingContentPage = new ViewingAndEditingContentPage();
     ContactPage contactPage = new ContactPage();
     ProfileRedactionPage profileRedactionPage = new ProfileRedactionPage();
+
 }

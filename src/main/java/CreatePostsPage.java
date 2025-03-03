@@ -1,8 +1,10 @@
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.*;
 
 public class CreatePostsPage {
 
@@ -10,19 +12,14 @@ public class CreatePostsPage {
     private SelenideElement postTitleField = $("[name=\"title\"]");
     private SelenideElement postDescriptionField = $(".form-group:nth-child(2) .form-control ");
     private SelenideElement postСontentField = $("[name=\"content\"]");
-    private SelenideElement submitButton = $("button");
-    private SelenideElement titleOfCreatedPost = $(".post-content__top h3");  //          ????????????????????????????????????????????? проверить и поменять
+    private SelenideElement submitButton = $("[data-test=\"submit\"]");
+    private SelenideElement titleOfCreatedPost = $(".post:first-child  .post-content__top");
 
     private SelenideElement uploadImageField = $(".post_dropzone__TA6PN  input");
     private SelenideElement datePublishingPostField = $("#publishDate");
     private SelenideElement uploadedImage = $(".post_uploaded_image__7qSWV:first-child");
     private SelenideElement errorMessageUploadImage = $(".post_error_message__FQTrb");
-    private SelenideElement saveDraftTumbler = $("#draftCheckbox");
-
-//    private SelenideElement errorMessageEmptyTitle = $(".form-group:first-child .error");
-//    private SelenideElement errorMessageEmptyDescription = $x(".form-group:nth-child(2) .error");
-//    private SelenideElement errorMessageEmptyContent = $x("//*[@id=\"root\"]/div[2]/div[2]/div/form/div[3]/p");
-
+    private SelenideElement saveDraftTumbler = $(".post-header__checkbox:nth-child(2)");
 
     public void clickCreatePostIcon() {
         createPostIcon.shouldBe(visible).click();
@@ -48,18 +45,6 @@ public class CreatePostsPage {
         titleOfCreatedPost.shouldBe(visible).shouldHave(text(expectedTitleOfCreatedPost));
     }
 
-    //    public void titleErrorTextMessage(String expectedTitleErrorTextMessage){
-//        errorMessageEmptyTitle.shouldHave(text(expectedTitleErrorTextMessage));
-//    }
-//    public void descriptionErrorTextMessage(String expectedDescriptionErrorTextMessage){
-//        errorMessageEmptyDescription.shouldHave(text(expectedDescriptionErrorTextMessage));
-//    }
-//    public void contentTextMessage(String expectedContentErrorTextMessage){
-//        errorMessageEmptyContent.shouldHave(text(expectedContentErrorTextMessage));
-//    }
-//    public void clearDescriptionFiled(){
-//        postDescriptionField.clear();
-//    }
     public void clearContentFiled() {
         postСontentField.clear();
     }
@@ -88,10 +73,24 @@ public class CreatePostsPage {
         errorMessageUploadImage.shouldHave(text(expectedErrorMessage));
     }
 
-    public void clickSaveDraftTumbler(){
-        saveDraftTumbler.click();
+    private SelenideElement myDraftButton = $("[alt=\"Drafts\"]");
+
+    public void clickSaveADraftButton() {
+        saveDraftTumbler.shouldBe(visible).click();
     }
 
+    public void clickMyDraftButton() {
+        myDraftButton.shouldBe(visible).click();
+    }
+
+    public void checkTitleText(String expectedTitleOfCreatedPost) {
+        titleOfCreatedPost.shouldBe(visible).shouldHave(text(expectedTitleOfCreatedPost));
+    }
+
+    public List<String> getAllDraftTitles() {
+        return $$(".post-content__top h3")
+                .texts(); // Получаем список текстов всех заголовков черновиков
+    }
 }
 
 

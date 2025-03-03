@@ -20,4 +20,6 @@ public class HomePage {
     public void checkPostSelect() {
         homePagePostSelect.shouldBe(visible).click();
     }
+
+
 }

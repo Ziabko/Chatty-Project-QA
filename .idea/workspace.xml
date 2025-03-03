@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="end redaction">
+    <list default="true" id="d19f86e6-8159-4fd1-9ebc-ec27e46cd505" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/AdminPanelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdminPanelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AdminPanelPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CreateAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreateAccountPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CreatePostsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreatePostsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserRegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserRegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CreatePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreatePostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,13 +30,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -43,124 +45,73 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.ContactTest.createContactMessageWithEmptyContent.executor": "Run",
-    "JUnit.ContactTest.createContactMessageWithEmptyEmail.executor": "Run",
-    "JUnit.ContactTest.createContactMessageWithEmptyName.executor": "Run",
-    "JUnit.ContactTest.createContactMessageWithInvalidContent.executor": "Run",
-    "JUnit.ContactTest.createContactMessageWithInvalidContentLang.executor": "Run",
+    "JUnit.AdminPanelTest.CreatePostAsDraft.executor": "Run",
+    "JUnit.AdminPanelTest.createUserAsAAdmin.executor": "Run",
+    "JUnit.AdminPanelTest.deleteAccountUserAsAAdmin.executor": "Run",
+    "JUnit.AdminPanelTest.editUserAsAAdmin.executor": "Run",
+    "JUnit.AdminPanelTest.searchUserAsAAdmin.executor": "Run",
+    "JUnit.AdminPanelTest.unsuccessfulSearchUserAsAAdmin.executor": "Run",
     "JUnit.ContactTest.createContactMessageWithInvalidContentShort.executor": "Run",
-    "JUnit.ContactTest.createContactMessageWithInvalidContentЫhort.executor": "Run",
-    "JUnit.ContactTest.createContactMessageWithInvalidEmail.executor": "Run",
-    "JUnit.ContactTest.createContactMessageWithInvalidEmailWithoutAt.executor": "Run",
-    "JUnit.ContactTest.createContactMessageWithInvalidName.executor": "Run",
-    "JUnit.ContactTest.createContactMessageWithValidDate.executor": "Run",
-    "JUnit.CreateAccountTest.createAccountWithAdminStatus.executor": "Run",
-    "JUnit.CreateAccountTest.createAccountWithEmptyConfirmPassword.executor": "Run",
-    "JUnit.CreateAccountTest.createAccountWithInvalidConfirmPassword.executor": "Run",
-    "JUnit.CreateAccountTest.createUserAccountWithEmptyEmail.executor": "Run",
-    "JUnit.CreateAccountTest.createUserAccountWithEmptyEmailAndPassword.executor": "Run",
-    "JUnit.CreateAccountTest.createUserAccountWithEmptyPassword.executor": "Run",
-    "JUnit.CreateAccountTest.createUserAccountWithInvalidEmail.executor": "Run",
-    "JUnit.CreateAccountTest.createUserAccountWithInvalidPassword.executor": "Run",
-    "JUnit.CreateAccountTest.validCreateUserAccount.executor": "Run",
-    "JUnit.CreatePostTest.createPostUserWith1001SymbolsContent.executor": "Run",
-    "JUnit.CreatePostTest.createPostUserWithBigImageSize.executor": "Run",
-    "JUnit.CreatePostTest.createPostUserWithEmptyContent.executor": "Run",
+    "JUnit.CreatePostTest.CreatePostAsDraft.executor": "Run",
     "JUnit.CreatePostTest.createPostUserWithEmptyDescription.executor": "Run",
-    "JUnit.CreatePostTest.createPostUserWithEmptyTitle.executor": "Run",
-    "JUnit.CreatePostTest.createPostUserWithEmtyDescription.executor": "Run",
-    "JUnit.CreatePostTest.createPostUserWithInValidImageGif.executor": "Run",
-    "JUnit.CreatePostTest.createPostUserWithInvalidDeferredPublicationDate.executor": "Run",
-    "JUnit.CreatePostTest.createPostUserWithInvalidDescription.executor": "Run",
-    "JUnit.CreatePostTest.createPostUserWithInvalidTitle.executor": "Run",
     "JUnit.CreatePostTest.createPostUserWithValidData.executor": "Run",
-    "JUnit.CreatePostTest.createPostUserWithValidImageJpg.executor": "Run",
-    "JUnit.CreatePostTest.createPostUserWithValidImagePng.executor": "Run",
-    "JUnit.LoginTest.checkSignInLinkIsNotVisible.executor": "Run",
-    "JUnit.LoginTest.emptyLoginAndPassword.executor": "Run",
-    "JUnit.LoginTest.invalidUsername.executor": "Run",
+    "JUnit.LoginTest.accountLogoutAdminUser.executor": "Run",
     "JUnit.LoginTest.successAdminLogin.executor": "Run",
     "JUnit.LoginTest.successUserLogin.executor": "Run",
-    "JUnit.ProfileRedactionTest.ProfilePasswordRedactionTest.executor": "Run",
-    "JUnit.ProfileRedactionTest.profileEditingTest.executor": "Run",
-    "JUnit.ProfileRedactionTest.profilePasswordRedactionTest.executor": "Run",
-    "JUnit.UserRegistrationTest.avatarImageUpload.executor": "Run",
-    "JUnit.UserRegistrationTest.registrationWithValidData.executor": "Run",
-    "JUnit.UserRegistrationTest.uploadAvatarPhoto.executor": "Run",
-    "JUnit.UserRegistrationTest.userRegistrationWithEmptyName.executor": "Run",
-    "JUnit.UserRegistrationTest.userRegistrationWithEmptySurname.executor": "Run",
-    "JUnit.UserRegistrationTest.userRegistrationWithInvalidBirthdate.executor": "Run",
-    "JUnit.UserRegistrationTest.userRegistrationWithInvalidName.executor": "Run",
-    "JUnit.UserRegistrationTest.userRegistrationWithInvalidSurname.executor": "Run",
-    "JUnit.UserRegistrationTest.userRegistrationWithUnselectedGender.executor": "Run",
-    "JUnit.UserRegistrationTest.userRegistrationWithValidData.executor": "Run",
-    "JUnit.UserRegistrationTest.userRegistrationWithValidDataWithEmptyPhone.executor": "Run",
-    "JUnit.ViewingAndEditingContentTest.DeleteMyUserPost.executor": "Run",
-    "JUnit.ViewingAndEditingContentTest.editMyUserPost.executor": "Run",
-    "JUnit.ViewingAndEditingContentTest.viewingAndSelectingPost.executor": "Run",
-    "JUnit.ViewingAndEditingContentTest.viewingPostFeed.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Tel_Ran/QA/regresin-Api",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "last_opened_file_path": "C:/Tel_Ran/QA/Chatty Project QA",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Tel_Ran\Chatty-Project-QA\src\test\resourse\images" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.CreatePostTest.createPostUserWithValidData">
-    <configuration name="CreatePostTest.createPostUserWithValidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AdminPanelTest.createUserAsAAdmin">
+    <configuration name="AdminPanelTest.createUserAsAAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qa-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AdminPanelTest" />
+      <option name="METHOD_NAME" value="createUserAsAAdmin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminPanelTest.deleteAccountUserAsAAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qa-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AdminPanelTest" />
+      <option name="METHOD_NAME" value="deleteAccountUserAsAAdmin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminPanelTest.searchUserAsAAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qa-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AdminPanelTest" />
+      <option name="METHOD_NAME" value="searchUserAsAAdmin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminPanelTest.unsuccessfulSearchUserAsAAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qa-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AdminPanelTest" />
+      <option name="METHOD_NAME" value="unsuccessfulSearchUserAsAAdmin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreatePostTest.CreatePostAsDraft" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qa-project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CreatePostTest" />
-      <option name="METHOD_NAME" value="createPostUserWithValidData" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProfileRedactionTest.ProfilePasswordRedactionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qa-project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProfileRedactionTest" />
-      <option name="METHOD_NAME" value="ProfilePasswordRedactionTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProfileRedactionTest.profileEditingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qa-project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProfileRedactionTest" />
-      <option name="METHOD_NAME" value="profileEditingTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProfileRedactionTest.profilePasswordRedactionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qa-project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProfileRedactionTest" />
-      <option name="METHOD_NAME" value="profilePasswordRedactionTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ViewingAndEditingContentTest.editMyUserPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qa-project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ViewingAndEditingContentTest" />
-      <option name="METHOD_NAME" value="editMyUserPost" />
+      <option name="METHOD_NAME" value="CreatePostAsDraft" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CreatePostTest.createPostUserWithValidData" />
-        <item itemvalue="JUnit.ViewingAndEditingContentTest.editMyUserPost" />
-        <item itemvalue="JUnit.ProfileRedactionTest.profilePasswordRedactionTest" />
-        <item itemvalue="JUnit.ProfileRedactionTest.profileEditingTest" />
-        <item itemvalue="JUnit.ProfileRedactionTest.ProfilePasswordRedactionTest" />
+        <item itemvalue="JUnit.AdminPanelTest.createUserAsAAdmin" />
+        <item itemvalue="JUnit.CreatePostTest.CreatePostAsDraft" />
+        <item itemvalue="JUnit.AdminPanelTest.unsuccessfulSearchUserAsAAdmin" />
+        <item itemvalue="JUnit.AdminPanelTest.searchUserAsAAdmin" />
+        <item itemvalue="JUnit.AdminPanelTest.deleteAccountUserAsAAdmin" />
       </list>
     </recent_temporary>
   </component>
@@ -185,171 +136,17 @@
       <option name="presentableId" value="Default" />
       <updated>1738922023729</updated>
     </task>
-    <task id="LOCAL-00001" summary="change test and page classes">
-      <option name="closed" value="true" />
-      <created>1739119393994</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1739119393994</updated>
-    </task>
-    <task id="LOCAL-00002" summary="change test and page classes">
-      <option name="closed" value="true" />
-      <created>1739269408137</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1739269408137</updated>
-    </task>
-    <task id="LOCAL-00003" summary="id 139 is negativ">
-      <option name="closed" value="true" />
-      <created>1739269609675</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1739269609675</updated>
-    </task>
-    <task id="LOCAL-00004" summary="createPostPage, PostTest">
-      <option name="closed" value="true" />
-      <created>1739282817759</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1739282817759</updated>
-    </task>
-    <task id="LOCAL-00005" summary="user registration">
-      <option name="closed" value="true" />
-      <created>1739393865935</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1739393865935</updated>
-    </task>
-    <task id="LOCAL-00006" summary="user registration">
-      <option name="closed" value="true" />
-      <created>1739448134746</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1739448134746</updated>
-    </task>
-    <task id="LOCAL-00007" summary="viewing">
-      <option name="closed" value="true" />
-      <created>1739523279417</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1739523279417</updated>
-    </task>
-    <task id="LOCAL-00008" summary="pages, contact us">
-      <option name="closed" value="true" />
-      <created>1739530888839</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1739530888839</updated>
-    </task>
-    <task id="LOCAL-00009" summary="pages, contact us">
-      <option name="closed" value="true" />
-      <created>1739645958646</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1739645958646</updated>
-    </task>
-    <task id="LOCAL-00010" summary="contact us">
-      <option name="closed" value="true" />
-      <created>1739737378161</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1739737378161</updated>
-    </task>
-    <task id="LOCAL-00011" summary="redaction">
-      <option name="closed" value="true" />
-      <created>1739781542235</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1739781542235</updated>
-    </task>
-    <task id="LOCAL-00012" summary="redaction1">
-      <option name="closed" value="true" />
-      <created>1739782554949</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1739782554949</updated>
-    </task>
-    <task id="LOCAL-00013" summary="editing name">
-      <option name="closed" value="true" />
-      <created>1739784014420</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1739784014420</updated>
-    </task>
-    <task id="LOCAL-00014" summary="end redaction">
-      <option name="closed" value="true" />
-      <created>1739787313118</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1739787313118</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="main" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="Olga_10.02" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="change test and page classes" />
-    <MESSAGE value="id 139 is negativ" />
-    <MESSAGE value="createPostPage, PostTest" />
-    <MESSAGE value="user registration" />
-    <MESSAGE value="viewing" />
-    <MESSAGE value="pages, contact us" />
-    <MESSAGE value="contact us" />
-    <MESSAGE value="redaction" />
-    <MESSAGE value="redaction1" />
-    <MESSAGE value="editing name" />
-    <MESSAGE value="end redaction" />
-    <option name="LAST_COMMIT_MESSAGE" value="end redaction" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/LoginTest.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

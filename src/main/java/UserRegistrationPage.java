@@ -47,7 +47,7 @@ public class UserRegistrationPage {
     }
 
     public void clickSaveButton() {
-        saveButton.click();
+        saveButton.shouldBe(visible).click();
     }
 
     public void checkSaveButtonIsDisabled() {
@@ -71,6 +71,21 @@ public class UserRegistrationPage {
         userNameField.clear();
     }
 
+    public void checkUserName(String validName) {
+        userNameField.shouldBe(visible).shouldBe(text(validName));
+    }
+    public void checkCreatedUserName(String name) {
+        userNameField.shouldBe(visible).shouldHave(text(name));
+    }
+
+    public void createRandomUserInformation (String name, String surname, String gender, String birthdate, String phone){
+        userNameField.setValue(name);
+        userSurnameField.setValue(surname);
+        dropDownGender.setValue(gender);
+        userBirthDateField.setValue(birthdate);
+        userPhoneField.setValue(phone);
+        saveButton.click();
+    }
 
 }
 

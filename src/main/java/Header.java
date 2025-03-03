@@ -31,4 +31,10 @@ public class Header {
         contactLink.click();
     }
 
+    private SelenideElement adminPanelSelect = $("#root > div.header > div > div > div.header__user.open > div > ul > li:nth-child(3) > a");
+
+    public void clickSelectAdmitPanel() {
+        adminPanelSelect.shouldBe(visible).click();
+    }
+
 }
