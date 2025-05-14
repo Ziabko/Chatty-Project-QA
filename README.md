@@ -15,7 +15,7 @@ The goal of automated testing in the Chatty project is to increase test coverage
 - Support regression testing to prevent the reappearance of known issues
 - Enable continuous integration and fast feedback during development
 
-The implementation of API testing is provided in the Chatty-Project-QA-API repository.
+The implementation of API testing is provided in the [Chatty-Project-QA-API repository](https://github.com/Ziabko/Chatty-Project-QA-API).
 
 ✅ Testing Activities
 
